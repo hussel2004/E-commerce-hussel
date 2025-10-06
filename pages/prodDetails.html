@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/prodDetails.css">
+    <title>Product Detail</title>
+</head>
+<body>
+    <div id="headerPlaceholder"></div>
+    <div class="productDetailContainer" id="prodDetailContainer">
+        <div class="mainProductSection">
+            <div class="imageSection">            
+                <div class="thumbnailImages">
+                    <img src="../assets/images/iphone.webp" alt="Thumbnail 1" class="thumbnail">
+                    <img src="../assets/images/s26.jpg" alt="Thumbnail 2" class="thumbnail">
+                    <img src="../assets/images/macbook.jpg" alt="Thumbnail 3" class="thumbnail">
+                    <img src="../assets/images/ipad.jpg" alt="Thumbnail 4" class="thumbnail">
+                </div>
+            </div>
+            <div class="productInfoSection">
+                <div class="productDetailsSection">
+                    <h1 class="productTitle">Iphone 17</h1>
+                    <div class="productRating">
+                        <span class="ratingStars">⭐⭐⭐⭐⭐</span>
+                        <span class="numReviews">(12k Reviews)</span>
+                    </div>
+                    <div class="productPrice">$999</div>
+                    <div class="productModification">
+                        <div class="colorOptions">
+                            <label>Color:</label>
+                            <select id="colorSelect">
+                                <option value="black">Black</option>
+                                <option value="white">White</option>
+                                <option value="blue">Blue</option>
+                                <option value="red">Red</option>
+                            </select>
+                        </div>
+                        <div class="storageOptions">
+                            <label>Storage:</label>
+                            <select id="storageSelect">
+                                <option value="64gb">64GB</option>
+                                <option value="128gb">128GB</option>
+                                <option value="256gb">256GB</option>
+                                <option value="512gb">512GB</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="productQuantity">
+                        <label>Quantity:</label>
+                        <input type="number" id="quantityInput" value="1" min="1" max="10">
+                    </div>
+                    <div class="actionButtons">
+                        <button class="cartButton">Add to Cart</button>
+                        <button class="buyButton">Buy Now</button>  
+                    </div>   
+                </div>            
+            </div>
+        </div>        
+        <div class="additionalInfoSection">
+            <div class="infoButtons">
+                <button class="reviewsToggle">Customer Reviews</button>
+                <button class="specsToggle">Specifications</button>                
+            </div>
+
+        </div>
+    </div>
+    <div class="specReviewSection" id="specReviewSection">
+        <div class="customerReviews" id="customerReviews">
+            <h2>Customer Reviews</h2>
+            <div class="review">
+                <h3>Great Phone!</h3>
+                <p>⭐⭐⭐⭐⭐</p>
+                <p>I absolutely love my new iPhone 17. The camera is fantastic and the battery life is impressive.</p>
+                <p>- John D.</p>
+            </div>
+            <div class="review">
+                <h3>Good but pricey</h3>
+                <p>⭐⭐⭐⭐</p>
+                <p>The phone is great, but I feel it's a bit overpriced for the features it offers.</p>
+                <p>- Sarah K.</p>
+            </div>
+        </div>
+        <div class="productSpecifications" id="productSpecifications" style="display:none;">
+            <h2>Specifications</h2>
+            <ul>
+                <li>Display: 6.7-inch OLED</li>
+                <li>Processor: A17 Bionic Chip</li>
+                <li>Camera: Triple 12MP cameras</li>
+                <li>Battery: Up to 22 hours of talk time</li>
+                <li>Storage Options: 64GB, 128GB, 256GB, 512GB</li>
+                <li>Operating System: iOS 17</li>
+            </ul>
+        </div>
+
+    </div>
+
+    
+</body>
+</html>
