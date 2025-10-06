@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard Client - E-commerce</title>
+    <link rel="stylesheet" href="../styles/mon-compte.css">
+</head>
+<body>
+    <header>
+        <h1>Dashboard</h1>
+        <p>Bienvenue sur votre espace personnel</p>
+    </header>
+
+    !<nav class="sidebar">
+        <ul>
+            <li><a href="#resume">Résumé du compte</a></li>
+            <li><a href="#fidelite">Points de fidélité</a></li>
+            <li><a href="#historique">Historique des commandes</a></li>
+            <li><a href="#consultes">Produits consultés</a></li>
+        </ul>
+    </nav>
+
+    <main>
+      <!--
+        <section id="resume" class="card">
+            <h2>Résumé du compte</h2>
+            <p>Date de création : <strong>15 Janvier 2022</strong></p>
+            <p>Montant total dépensé : <strong>350 000 FCFA</strong></p>
+            <p>Nombre total de commandes : <strong>42</strong></p>
+        </section>
+        -->
+
+        <!-- Fidélité -->
+        <section id="fidelite" class="card">
+            <h2>Points de fidélité</h2>
+            <p>Total points : <strong>520</strong></p>
+            <p>Récompenses disponibles : <strong>2 bons d’achat</strong></p>
+        </section>
+
+        <!-- Historique -->
+        <section id="historique" class="card">
+            <h2>Historique des commandes</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Code Commande</th>
+                        <th>Date</th>
+                        <th>Statut</th>
+                        <th>Montant</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>A2025-001</td>
+                        <td>01/09/2025</td>
+                        <td>Livrée</td>
+                        <td>12 000 FCFA</td>
+                        <td><a href="#">Détails</a> | <a href="#">Télécharger facture</a></td>
+                    </tr>
+                    <tr>
+                        <td>A2025-002</td>
+                        <td>15/09/2025</td>
+                        <td>En attente</td>
+                        <td>8 500 FCFA</td>
+                        <td><a href="#">Détails</a> | <a href="#">Télécharger facture</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Retours -->
+        <section class="card">
+            <h2>Retours & Réclamations</h2>
+            <p>Aucun retour en cours.</p>
+        </section>
+
+        <!-- Produits consultés -->
+        <section id="consultes" class="card">
+            <h2>Produits consultés récemment</h2>
+            <ul>
+                <li>Écran 27" 4K</li>
+                <li>Clé USB 128Go</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mon E-commerce - Tous droits réservés</p>
+    </footer>
+</body>
+</html>
