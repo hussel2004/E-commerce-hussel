@@ -1,0 +1,38 @@
+/* Styles pour la page FAQ */
+
+.faq-page h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.faq-categorie {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #e9ecef;
+    border-radius: 6px;
+    background-color: #ffffff;
+}
+
+.faq-categorie h2 {
+    color: var(--couleur-primaire);
+    margin-bottom: 15px;
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 5px;
+}
+
+.qa-item {
+    margin-bottom: 20px;
+}
+
+.qa-item h3 {
+    font-size: 1.1rem;
+    color: var(--couleur-texte);
+    cursor: pointer; /* Indiquer que c'est cliquable (même si c'est statique) */
+}
+
+.qa-item p {
+    padding-left: 20px;
+    border-left: 3px solid #ccc;
+    margin-top: 5px;
+    color: var(--couleur-secondaire);
+}
