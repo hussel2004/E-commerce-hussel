@@ -1,0 +1,86 @@
+/* Définition des variables de couleur pour la charte graphique */
+:root {
+    --couleur-primaire: #776f73; /* Bleu (boutons, liens) */
+    --couleur-secondaire: #cccccc; /* Gris */
+    --couleur-fond: #8f253c; /* Fond clair */
+    --couleur-texte: #212529; /* Noir/Gris foncé */
+}
+
+/* Base Reset/Typographie */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--couleur-texte);
+    background-color: var(--couleur-fond);
+}
+
+.page-content {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* HEADER Styles */
+.main-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e9ecef;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--couleur-primaire);
+    text-decoration: none;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-nav li a {
+    text-decoration: none;
+    color: var(--couleur-texte);
+    padding: 0 15px;
+    transition: color 0.3s;
+}
+
+.main-nav li a:hover {
+    color: var(--couleur-primaire);
+}
+
+/* FOOTER Styles */
+.main-footer {
+    background-color: var(--couleur-texte);
+    color: #ffffff;
+    padding: 40px 50px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.footer-links, .footer-contact, .footer-copyright {
+    margin: 10px;
+}
+
+.main-footer h4 {
+    border-bottom: 2px solid var(--couleur-primaire);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.main-footer a {
+    color: #cccccc;
+    text-decoration: none;
+}
