@@ -1,36 +1,41 @@
 /* Container */
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .productDetailContainer {
   display: flex;
   flex-direction: column;
-  
-
-  
-  max-width: 1200px;
-
+  align-items: center;   
+  width: 100%;
   background-color:#cccccc;
-  border-radius: 12px;
+  position: relative;
+  
 }
 
 .mainProductSection{
   display: flex;
   gap: 2rem;
   flex: 1;
+  
 }
 
 /* Image Section */
 .imageSection {
   flex: 1;
-  background-image: url("../assets/images/iphone.webp"); /* default */
+  background-image: url("../assets/images/Services\ \(10\).png"); /* default */
   background-size: cover;
   background-position: center;
-  border-radius: 12px;
+  z-index: 0;
   border: 2px solid #cccccc;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  padding: 1rem;
-  min-height: 500px;
+  
+  
+  min-height:500px;
 }
 
 .thumbnailImages {
@@ -54,6 +59,7 @@
   display: flex;
   gap: 2rem;
   justify-content: center;
+  width: 100%;
 
   background-color: #333;
 }
@@ -62,21 +68,35 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 10px;
+  bottom: 0;
 }
 .infoButtons{
   display: flex;
-  gap: 4rem;
+  gap: 1rem;
   flex-direction: row;
   align-items: center;
 }
-
-.thumbnail:hover {
-  border: 2px solid #8f253c;
+.infoButtons button{
+  background-color: #ffffff95;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding: 0.5rem 1rem;
+  border: none;
+  color: #000000;
+  font-size: 1rem;
+  cursor: pointer; 
+  
+}
+.infoButtons button:hover{
+  background-color: #333;
+  color: #fff;
+}
+.infoButtons button.active{
+  background-color: #333;
+  color: #fff;
 }
 
-.thumbnail.active {
-  border: 2px solid #776f73;
-}
 
 /* Info Section */
 .productInfoSection {
@@ -84,6 +104,7 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  background-color: #cccccc;
 }
 
 .productTitle {
