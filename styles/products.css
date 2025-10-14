@@ -1,0 +1,276 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* --- Hero Section --- */
+.prodHero {
+  background: url('../assets/images/gwatch.jpg') center center/cover no-repeat;
+  background-size: contain;
+  height: 450px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+.prodHero h1 {
+    font-size: 300px;    
+    color: #fff;
+    z-index: 2;
+    position: absolute;
+
+}
+.searchContent{
+    background-color: #f9f9f9;
+    padding: 10px 20px;
+    display:flex;    
+    align-items: center;
+    justify-content: center;
+    gap: 500px;
+    z-index: 3;
+    position: absolute;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    bottom: 0;
+   
+    
+    
+}
+
+.prodHero h2{
+    font-size: 15px;
+    color: #8f253c;
+    font-weight: 400;
+    position: relative;
+    z-index: 4;
+}
+.searchBar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border:#8f253c 1px solid;
+    border-radius: 5px;
+}
+
+
+.prodHero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(119, 111, 115, 0.6); /* #776f73 overlay */
+  z-index: 0;
+}
+
+
+
+.prodHero input,
+.prodHero button {
+  position: relative;
+  z-index: 1;
+}
+
+
+
+
+.prodHero input {
+  padding: 10px;
+  width: 250px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+
+.prodHero button {
+  padding: 10px 20px;
+  background-color: #8f253c;
+  color: white;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.prodHero button:hover {
+  background-color: #a92e49;
+}
+
+/* --- Main Container --- */
+.prodContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 30px;
+  gap: 30px;
+}
+
+/* --- Category Sidebar --- */
+.catList {
+  min-width: 200px;
+  background-color: #cccccc;
+  padding: 20px;
+  border-radius: 8px;
+  color: #333;
+}
+
+.catList h1 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.categoryItem {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  border-left: 5px solid transparent;
+}
+
+.categoryItem:hover {
+  background-color: #776f73;
+  color: white;
+  border-left: 5px solid #8f253c;
+}
+
+/* --- Product List Section --- */
+
+.prdouctsSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.prodList {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 20px;
+   max-width: 1200px;
+   justify-content:center;
+
+  
+  
+  
+}
+
+/* --- Product Item Card --- */
+.productItem {
+  background-color:#f9f9f9;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.1s;
+}
+
+
+
+.prodImage img {
+  width: 270px;
+  height: 270px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.prodImage:hover {
+  transform: translateY(-2px);
+}
+.productItem h3 {
+  font-size: 25px;  
+  color: #000000;
+  font-weight: 500;
+}
+
+/* --- Rating and Price --- */
+.prodDetails{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 7px;
+}
+.ratingPrice{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rating {
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+}
+.numRating{
+    font-size: 12px;
+    
+}
+
+
+.prodPrice {
+  font-size: 17px;
+  font-weight: 450;
+  color: #8f253c;
+}
+
+/* --- Action Buttons --- */
+.actionButtons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.cartButton,
+.buyButton {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+/* Cart Button */
+.cartButton {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border:1px solid #8f253c;
+}
+
+.cartButton:hover {
+  background-color: #5f585b;
+}
+
+/* Buy Button */
+.buyButton {
+  background-color: #8f253c;
+  color: white;
+}
+
+.buyButton:hover {
+  background-color: #a52e47;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+  .prodContainer {
+    flex-direction: column;
+  }
+
+  .catList {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
