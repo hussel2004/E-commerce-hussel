@@ -1,0 +1,135 @@
+/* ===============================
+   STYLES GÉNÉRAUX
+   =============================== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #cccccc; /* gris clair */
+  color: #333; /* texte lisible */
+}
+
+h1, h2, h3 {
+  color: #8f253c; /* bordeaux */
+  text-align: center;
+}
+
+img {
+  border-radius: 5px;
+}
+
+/* ===============================
+   HEADER & NAVIGATION
+   =============================== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #776f73; /* gris foncé */
+  padding: 10px 40px;
+  color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #8f253c; /* effet bordeaux au survol */
+}
+
+/* ===============================
+   TITRE PRINCIPAL
+   =============================== */
+main h2 {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: #8f253c;
+}
+
+/* ===============================
+   TABLEAU DU PANIER
+   =============================== */
+.table-panier {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.table-panier th {
+  background-color: #776f73;
+  color: white;
+  padding: 15px;
+  text-transform: uppercase;
+}
+
+.table-panier td {
+  text-align: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.table-panier img {
+  width: 50px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+/* ===============================
+   TOTAL DU PANIER & BOUTON
+   =============================== */
+.total-panier {
+  width: 80%;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.total-panier p {
+  font-size: 1.2em;
+  color: #333;
+}
+
+.total-panier button {
+  background-color: #8f253c; /* bordeaux */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+.total-panier button:hover {
+  background-color: #776f73; /* gris foncé au survol */
+}
+
+/* ===============================
+   FOOTER
+   =============================== */
+footer {
+  background-color: #776f73;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
