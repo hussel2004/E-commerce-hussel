@@ -14,21 +14,27 @@
                 <header>            
                     <div id="navbar-container">
                         <a id="brand-name" href="index.html">E-Shop</a>
+                        <!-- For hamburger menu -->
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
                         <ul id="navbar">
                             <li>
-                                <a class="no-underline options" href="#">Browse Categories </a>
+                                <a class="no-underline options" href="pages/products.html">Browse Categories </a>
                                 <ul class="dropdown">
-                                    <li><a class="no-underline" href="#">Computers</a></li>
-                                    <li><a class="no-underline" href="#">Smartphones</a></li>
-                                    <li><a class="no-underline" href="#">Cameras</a></li>
-                                    <li><a class="no-underline" href="#">Smart watches</a></li>
+                                    <li><a class="no-underline" href="pages/category.html?cat=Computers">Computers</a></li>
+                                    <li><a class="no-underline" href="pages/category.html?cat=Smartphones">Smartphones</a></li>
+                                    <li><a class="no-underline" href="pages/category.html?cat=Cameras">Cameras</a></li>
+                                    <li><a class="no-underline" href="pages/category.html?cat=Smart watches">Smart watches</a></li>
                                 </ul>
                             </li>
-                            <li><a class="no-underline options" href="#">🔥Super Deals</a></li>
-                            <li><a class="no-underline options" href="#">About</a></li>
-                            <li><a class="no-underline options" href="#">Contact</a></li>
-                            <li><a class="no-underline options" href="#"><i class="fa-solid fa-cart-shopping"></i><span>Cart</span></a></li>
-                            <li><a class="no-underline user-login options" href="#"><i class="fa-solid fa-user"></i><span class="login-text">Hello, 
+                            <li><a class="no-underline options" href="pages/promotions.html">🔥Super Deals</a></li>
+                            <li><a class="no-underline options" href="pages/a-propos.html">About</a></li>
+                            <li><a class="no-underline options" href="pages/contact.html">Contact</a></li>
+                            <li><a class="no-underline options" href="pages/login-page.html"><i class="fa-solid fa-cart-shopping"></i><span>Cart</span></a></li>
+                            <li><a class="no-underline user-login options" href="pages/register-page.html"><i class="fa-solid fa-user"></i><span class="login-text">Hello, 
                                                             <strong>Login/Sign Up</strong></span></a></li>
 
 
@@ -42,7 +48,7 @@
                         <h2>Super value deals</h2>
                         <h1>On all products</h1>
                         <p>Save more while enjoying our new collections</p>
-                        <button>Shop Now</button>
+                        <button data-href="pages/products.html">Shop Now</button>
                     </div>
                     
                     <div id="catchy-products">
@@ -83,43 +89,43 @@
         <h2 class="after-banner">Featured Category</h2>
 
         <div class="category-grid">
-            <div class="category-card">
+            <a class="category-card no-underline" href="pages/category.html?cat=Computers">
                 <i class="fa-solid fa-laptop"></i>
                 <span>Computers</span>
-            </div>
-            <div class="category-card">
+            </a>
+            <a class="category-card no-underline" href="pages/category.html?cat=Smartphones">
                 <i class="fa-solid fa-mobile-screen-button"></i>
                 <span>Smartphones</span>
-            </div>
-            <div class="category-card">
+            </a>
+            <a class="category-card no-underline" href="pages/category.html?cat=Televisions">
                 <i class="fa-solid fa-tv"></i>
                 <span>Televisions</span>
-            </div>
-            <div class="category-card">
+            </a>
+            <a class="category-card no-underline" href="pages/category.html?cat=Headphones">
                 <i class="fa-solid fa-headphones"></i>
                 <span>Headphones</span>
-            </div>
-            <div class="category-card">
+            </a>
+            <a class="category-card no-underline" href="pages/category.html?cat=Cameras">
                 <i class="fa-solid fa-camera"></i>
                 <span>Cameras</span>
-            </div>
-            <div class="category-card">
+            </a>
+            <a class="category-card no-underline" href="pages/category.html?cat=Tablets">
                 <i class="fa-solid fa-tablet-screen-button"></i>
                 <span>Tablets</span>
-            </div>
-            <div class="category-card">
+            </a>
+            <a class="category-card no-underline" href="pages/category.html?cat=Smart Watches">
                 <i class="fa-solid fa-clock"></i>
                 <span>Smart Watches</span>
-            </div>
-            <div class="category-card">
+            </a>
+            <a class="category-card no-underline" href="pages/category.html?cat=Gaming">
                 <i class="fa-solid fa-gamepad"></i>
                 <span>Gaming</span>
-            </div>
+            </a>
         </div>
 
             <div class="view-all-categories-container">
                 <button class="view-all-categories-btn">
-                    <a href="#" style="text-decoration: none;">View All Categories</a>
+                    <a href="pages/products.html" style="text-decoration: none;">View All Categories</a>
                 </button>
             </div>
 
@@ -133,7 +139,7 @@
                     <div class="feature-text">
                         <h3 style="text-align: center; font-size: 1.5rem">Iphone Series</h3>
                         <p>Get yourself one of the best smartphones in the market.</p>
-                        <button class="cta-btn">Get One</button>
+                        <button class="cta-btn" data-href="pages/login-page.html">Get One</button>
                     </div>
 
                 </div>
@@ -142,7 +148,7 @@
                     <div class="feature-text2">
                         <h3>Samsung Galaxy S22 Ultra</h3>
                         <p>Experience the new ULTRA!</p>
-                        <button>Purchase Now</button>
+                        <button data-href="pages/login-page.html">Purchase Now</button>
                     </div>
                 </div>
             </div>
@@ -151,20 +157,20 @@
                 <div class="digital-aesthetics1">
                     <div class="digital-text">
                         <p>Wireless HeadPhones <span style="font-weight: bold; color: #8f253c;">New Series</span> OUT</p>
-                        <button class="aesthetic-cta-btn">Buy Now</button>
+                        <button class="aesthetic-cta-btn" data-href="pages/login-page.html">Buy Now</button>
                     </div>
                 </div>
                 <div class="digital-aesthetics2">
                     <div class="digital-text">
                         <p style="font-size: 20px;color: white;"><span style="font-weight: bold; color: rgb(165, 42, 52);">CAPTURE</span> the moments that matter<br>
                         with our<br><span style="font-size: 25px;font-weight: bold;color: #cccccc;">Canon EOS series</span></p>
-                        <button class="aesthetic-cta-btn">Check it OUT</button>
+                        <button class="aesthetic-cta-btn" data-href="pages/login-page.html">Check it OUT</button>
                     </div>
                 </div>
             </div>
             <div class="view-all-categories-container">
                 <button class="view-all-categories-btn">
-                    <a href="#" style="text-decoration: none;">View All Featured products</a>
+                    <a href="pages/featured-products.html" style="text-decoration: none;">View All Featured products</a>
                 </button>
             </div>            
         </div>
@@ -176,7 +182,7 @@
                 <div class="collection-card-content">
                     <h3>Workspace-aesthetic IV</h3>
                     <p style="font-weight: bold;">Digitalize your aesthetics</p>
-                    <button class="collection-card-btn">View Collection</button>
+                    <button class="collection-card-btn" data-href="pages/login-page.html">View Collection</button>
                 </div>
             </div>
 
@@ -184,13 +190,13 @@
                 <div class="collection-card-content">
                     <h3>Apple Pack</h3>
                     <p style="font-weight: bold;">Make your Digital Apple</p>
-                    <button class="collection-card-btn">View Collection</button>
+                    <button class="collection-card-btn" data-href="pages/login-page.html">View Collection</button>
                 </div>
             </div>
         </div>
             <div class="view-all-categories-container" style="margin-top: 50px;margin-bottom: 200px;">
                 <button class="view-all-categories-btn">
-                    <a href="#" style="text-decoration: none;">CheckOut All Collections</a>
+                    <a href="pages/collections.html" style="text-decoration: none;">CheckOut All Collections</a>
                 </button>
             </div>
 
@@ -262,7 +268,7 @@
 
 
 
-            
+            <script src="Scripts/home.js"></script>
     </body>
 
 </html>

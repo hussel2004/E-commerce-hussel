@@ -1,78 +1,213 @@
 <!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nom du Site - À Propos</title> <link rel="stylesheet" href="../assets/css/global.css">
-    <link rel="stylesheet" href="../assets/css/a-propos.css"> </head>
-<body>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>E-Shop - Contact</title>
 
-    <header class="main-header">
-        <div class="logo">
-            <a href="../index.html">Votre Logo</a>
-        </div>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="../index.html">Accueil</a></li>
-                <li><a href="../produits.html">Produits</a></li>
-                <li><a href="a-propos.html">À Propos</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-            </ul>
-        </nav>
-    </header>
+        <!-- Use same site theme as index -->
+        <link rel="stylesheet" href="../styles/home.css" />
+        <link rel="stylesheet" href="../assets/css/global.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 
-    <main class="page-content">
-        <main class="page-content contact-page"></main>
-        
-        <h1>Contactez-Nous</h1>
+        <style>
+            /* Small page-specific adjustments to fit the site theme */
+            .contact-hero {
+                max-width: 1100px;
+                margin: 40px auto;
+                padding: 30px;
+                background: linear-gradient(180deg, rgba(143,37,60,0.04), rgba(143,37,60,0.02));
+                border-radius: 10px;
+                box-shadow: 0 6px 24px rgba(8,8,8,0.06);
+            }
+            .contact-grid {
+                display: flex;
+                gap: 2.5rem;
+                flex-wrap: wrap;
+            }
+            .contact-card, .contact-form-card {
+                flex: 1 1 320px;
+                background: white;
+                padding: 22px;
+                border-radius: 8px;
+                border: 1px solid #eee;
+            }
+            .contact-card h2, .contact-form-card h2 {
+                color: #8f253c;
+                margin-bottom: 12px;
+            }
+            .contact-card p, .contact-card a {
+                margin: 8px 0;
+                color: #333;
+            }
+            .contact-form {
+                display: grid;
+                gap: 10px;
+            }
+            .contact-form input[type="text"],
+            .contact-form input[type="email"],
+            .contact-form textarea {
+                width: 100%;
+                padding: 10px 12px;
+                border: 1px solid #ddd;
+                border-radius: 6px;
+                font-size: 0.95rem;
+            }
+            .btn-submit {
+                display: inline-block;
+                background: #8f253c;
+                color: #fff;
+                padding: 10px 16px;
+                border: none;
+                border-radius: 6px;
+                cursor: pointer;
+                font-weight: 600;
+            }
+            .btn-submit:hover {
+                background-color: #776f73;
+            }
+            @media (max-width: 720px) {
+                .contact-hero { padding: 18px; }
+            }
+        </style>
+    </head>
+    <body>
 
-        <section class="contact-info">
-            <h2>Informations Clés</h2>
-            <p><strong>Téléphone :</strong> +237 677461149</p>
-            <p><strong>Email :</strong> <a href="mailto:support@votre-site.com">loicbakotcha@gmail.com</a></p>
-            <p><strong>Adresse :</strong> 123 Rue de Melen yaoundé</p>
-        </section>
+        <!-- Header (keeps the same theme/navigation as index.html) -->
+        <!-- <header>            
+            <div id="navbar-container">
+                <a id="brand-name" href="../index.html">E-Shop</a>
 
-        <section class="form-container">
-            <h2>Envoyez-Nous un Message</h2>
-            <form class="contact-form" action="#" method="POST">
-                <label for="nom">Nom Complet :</label>
-                <input type="text" id="nom" name="nom" required>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
 
-                <label for="email">Email :</label>
-                <input type="email" id="email" name="email" required>
+                <ul id="navbar">
+                    <li>
+                        <a class="no-underline options" href="products.html">Browse Categories</a>
+                        <ul class="dropdown">
+                            <li><a class="no-underline" href="category.html?cat=Computers">Computers</a></li>
+                            <li><a class="no-underline" href="category.html?cat=Smartphones">Smartphones</a></li>
+                            <li><a class="no-underline" href="category.html?cat=Cameras">Cameras</a></li>
+                            <li><a class="no-underline" href="category.html?cat=Smart watches">Smart watches</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="no-underline options" href="promotions.html">🔥Super Deals</a></li>
+                    <li><a class="no-underline options" href="a-propos.html">About</a></li>
+                    <li><a class="no-underline options" href="contact.html">Contact</a></li>
+                    <li><a class="no-underline options" href="login-page.html"><i class="fa-solid fa-cart-shopping"></i><span>Cart</span></a></li>
+                    <li><a class="no-underline user-login options" href="register-page.html"><i class="fa-solid fa-user"></i><span class="login-text">Hello, <strong>Login/Sign Up</strong></span></a></li>
+                </ul>
+            </div>
+        </header> -->
 
-                <label for="sujet">Sujet :</label>
-                <input type="text" id="sujet" name="sujet">
+        <header>
+            <div id="navbar-container" style="margin:30px auto 20px;">
+            <a id="brand-name" class="no-underline" href="../index.html">E-Shop</a>
+            <a class="no-underline" href="../index.html" style="margin-left:auto; padding:8px 12px; border-radius:6px; background:#f0f0f0;">Back</a>
+            </div>
+        </header>
 
-                <label for="message">Votre Message :</label>
-                <textarea id="message" name="message" rows="6" required></textarea>
+        <main class="contact-hero">
+            <h1 style="text-align:center; margin-bottom: 18px;">Contact Us</h1>
 
-                <button type="submit" class="btn-submit">Envoyer le Message</button>
-            </form>
-        </section>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h2>Key Information</h2>
+                    <p><strong>Phone:</strong> <a href="tel:+237677461149">+237 677 461 149</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:loicbakotcha@gmail.com">loicbakotcha@gmail.com</a></p>
+                    <p><strong>Address:</strong> National Advanced School of Engineering of Yaoundé (NASEY), Melen</p>
 
-    </main>
+                    <h3 style="margin-top:16px;">Business Hours</h3>
+                    <p>Mon - Fri: 08:00 — 17:45</p>
+
+                    <h3 style="margin-top:16px;">Follow Us</h3>
+                    <p>
+                        <a href="#" style="margin-right:8px;"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" style="margin-right:8px;"><i class="fab fa-twitter"></i></a>
+                        <a href="#" style="margin-right:8px;"><i class="fab fa-instagram"></i></a>
+                    </p>
+                </div>
+
+                <div class="contact-form-card">
+                    <h2>Send Us a Message</h2>
+                    <form class="contact-form" action="#" method="POST" novalidate>
+                        <label for="nom" style="font-weight:600;">Full Name</label>
+                        <input type="text" id="nom" name="nom" required>
+
+                        <label for="email" style="font-weight:600;">Email</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="sujet" style="font-weight:600;">Subject</label>
+                        <input type="text" id="sujet" name="sujet">
+
+                        <label for="message" style="font-weight:600;">Your Message</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+
+                        <div style="display:flex; justify-content:flex-end; margin-top:8px;">
+                            <button type="submit" class="btn-submit">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </main>
 
-    <footer class="main-footer">
-        <div class="footer-links">
-            <h4>Information</h4>
-            <ul>
-                <li><a href="a-propos.html">Notre Histoire</a></li>
-                <li><a href="faq.html">Aide & FAQ</a></li>
-            </ul>
-        </div>
-        <div class="footer-contact">
-            <h4>Nous Contacter</h4>
-            <p>Email: loicbakotcha@gmail.com</p>
-            <p>Tél: +237 6 77 46 114 49</p>
-        </div>
-        <div class="footer-copyright">
-            <p>&copy; 202o POLYTECHNIC WX. Tous droits réservés.</p>
-        </div>
-    </footer>
+        <!-- Footer: keep consistent with index footer -->
+        <footer class="section-p1">
+            <div class="col" style="padding-left: 30px;">
+                <a id="brand-name" style="margin-bottom: 30px;" href="../index.html">E-Shop</a>
+                <h4>Contact</h4>
+                <p><strong>Address: </strong>National Advanced School of Engineering of Yaounde(NASEY), Melen</p>
+                <p><strong>Phone: </strong> +237 677 461 149</p>
+                <p><strong>Hours: </strong> 8:00 - 17:45, Mon - Fri</p>
+                <div class="follow">
+                    <h4>Follow Us</h4>
+                    <div class="icon">
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-pinterest-p"></i>
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                </div>
+            </div>
 
-</body>
+            <div class="col">
+                <h4>About</h4>
+                <a href="a-propos.html">About us</a>
+                <a href="#">Delivery Information</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+            <div class="col">
+                <h4>My Account</h4>
+                <a href="login-page.html">Sign In</a>
+                <a href="#">View Cart</a>
+                <a href="#">My Wishlist</a>
+                <a href="#">Track My Order</a>
+                <a href="#">Help</a>
+            </div>
+
+            <div class="col install">
+                <h4>Install App</h4>
+                <p>From App Store or Google Play</p>
+                <div class="row">
+                    <img src="../assets/images/app.jpg" alt="">
+                    <img src="../assets/images/play.jpg" alt="">
+                </div>
+                <p>Secured Payment Gateways</p>
+                <img src="../assets/images/pay.png" alt="">
+            </div>
+
+            <div class="copyright">
+                <p>2025, 4GI - HTML CSS E-commerce site</p>
+            </div>
+        </footer>
+
+        <script src="../Scripts/home.js"></script>
+    </body>
 </html>
