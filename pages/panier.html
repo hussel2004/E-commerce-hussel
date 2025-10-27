@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon Panier</title>
+  <link rel="stylesheet" href="assets/css/panier.css">
+</head>
+<body>
+
+  <div class="cart-container">
+
+    <!-- TITRE ET BOUTON -->
+    <div class="cart-header">
+      <h1>Mon Panier</h1>
+      <button class="continue-btn">Continuer vos achats</button>
+    </div>
+
+    <!-- EN-TÊTE DE TABLE -->
+    <div class="cart-header-row">
+      <span>Produit</span>
+      <span>Prix</span>
+      <span>Quantité</span>
+      <span>Total</span>
+    </div>
+
+    <!-- PRODUIT 1 -->
+    <div class="cart-item">
+      <div class="product">
+        <img src="assets/images/iphone.webp" alt="iphone 17">
+        <div>
+          <h3>iphone 17</h3>
+          <button class="remove-btn">Supprimer</button>
+        </div>
+      </div>
+      <div class="price">499.00 €</div>
+      <div class="quantity">
+        <button class="qty-btn minus">−</button>
+        <span>1</span>
+        <button class="qty-btn plus">+</button>
+      </div>
+      <div class="total">499.00 €</div>
+    </div>
+
+    <!-- PRODUIT 2 -->
+    <div class="cart-item">
+      <div class="product">
+        <img src="assets/images/airpod-better.png" alt="airpod-better">
+        <div>
+          <h3>airpod-better</h3>
+          <button class="remove-btn">Supprimer</button>
+        </div>
+      </div>
+      <div class="price">200.00 €</div>
+      <div class="quantity">
+        <button class="qty-btn minus">−</button>
+        <span>1</span>
+        <button class="qty-btn plus">+</button>
+      </div>
+      <div class="total">200.00 €</div>
+    </div>
+
+    <!-- RÉSUMÉ DU PANIER -->
+    <div class="summary">
+      <div class="line">
+        <span>Sous-total</span>
+        <span class="subtotal-value">0.00 €</span>
+      </div>
+      <div class="total-line">
+        <span>Total</span>
+        <span class="total-value">0.00 €</span>
+      </div>
+      <button class="checkout">Passer la commande</button>
+    </div>
+
+  </div>
+
+  <script src="assets/js/panier.js" defer></script>
+</body>
+</html>
