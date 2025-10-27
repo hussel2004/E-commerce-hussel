@@ -4,42 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-    <title>Login-page</title>
-    <link type="text/css" rel="stylesheet" href="../styles/login-page.css">
+    <title>Login — E-Shop</title>
+    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="../styles/login-page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-<div class="contenair">
-    <div class="text-side">
-        <h1>Come join us!</h1>
-        <p>We are so excited to have you here.<br> If you haven't already, create
-            an account to get <br>access to exclusive offers, rewards, and discounts.</p>
-        <button class="first-button">Have you an account? Bigin Here.</button>
-    </div>
-    <div class="form-side">
-        <h1>SignIn</h1>
-        <form>
-            <input type="text" name="email" placeholder="email">
-            <input type="text" name="username" placeholder="username">
-            <input type="text" name="password" placeholder="password">
-            <input type="button" name="SignUpButton" value="SignIn">
-        </form>
-        <p>Or signup with</p>
-        <div class="icon-list">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" width="30" height="30" alt="Facebook" />
-            </a>
-            <a href="https://google.com" target="_blank" rel="noopener noreferrer">
-                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/google.svg" width="30" height="30" alt="Google" />
-            </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" width="30" height="30" alt="LinkedIn" />
-            </a>
 
+    <div class="login-container">
+        <div class="text-side" style="background-color: #8f253c;">
+            <h1>Welcome Back!</h1>
+            <p style="color: black;">We're glad to see you again. Get access to your orders, wishlist, and recommendations.</p>
+            <span>Don't have an account?</span>
+            <a href="register-page.html" class="signup-btn">Sign Up</a>
+        </div>
+        <div class="form-side">
+            <h1>Sign In</h1>
+            <form>
+                <div class="input-group">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="input-group">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" name="username" placeholder="Username" required>
+                </div>
+                <div class="input-group">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" name="password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="signin-btn" >Sign In</button>
+            </form>
+            <p>Or sign in with</p>
+            <div class="social-login">
+                <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-btn"><i class="fab fa-google"></i></a>
+                <a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
         </div>
     </div>
-</div>
+
 </body>
 </html>
