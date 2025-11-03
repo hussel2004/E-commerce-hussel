@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <title>Login-page</title>
     <link type="text/css" rel="stylesheet" href="../styles/login-page.css">
+    <script src="../scripts/login-register.js"></script>
 </head>
 <body>
 <div class="contenair">
@@ -16,15 +17,15 @@
         <h1>Come join us!</h1>
         <p>We are so excited to have you here.<br> If you haven't already, create
             an account to get <br>access to exclusive offers, rewards, and discounts.</p>
-        <button class="first-button">Have you an account? Bigin Here.</button>
+        <button onclick="location.href='register-page.html'" class="first-button" id="goToregister">Have you an account? Bigin Here.</button>
     </div>
     <div class="form-side">
         <h1>SignIn</h1>
-        <form>
-            <input type="text" name="email" placeholder="email">
-            <input type="text" name="username" placeholder="username">
-            <input type="text" name="password" placeholder="password">
-            <input type="button" name="SignUpButton" value="SignIn">
+        <form id="myForm">
+            <input type="text" name="email" placeholder="email" id="email">
+            <input type="text" name="username" placeholder="username" id="username">
+            <input type="text" name="password" placeholder="password" id="password">
+            <input type="button" name="SignUpButton" value="SignIn" id="signUpButton">
         </form>
         <p>Or signup with</p>
         <div class="icon-list">
@@ -37,7 +38,6 @@
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
                 <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" width="30" height="30" alt="LinkedIn" />
             </a>
-
         </div>
     </div>
 </div>

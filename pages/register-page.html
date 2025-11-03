@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <title>Login-page</title>
     <link type="text/css" rel="stylesheet" href="../styles/register-page.css">
+    <script src="../scripts/login-register.js"></script>
 </head>
 <body>
 <div class="contenair">
@@ -16,15 +17,15 @@
         <h1>Come join us!</h1>
         <p>We are so excited to have you here.<br> If you haven't already, create
             an account to get <br>access to exclusive offers, rewards, and discounts.</p>
-        <button class="first-button">Already have an account? Bigin.</button>
+        <button onclick="location.href='login-page.html'" class="first-button" id="goToLogin">Already have an account? Bigin.</button>
     </div>
     <div class="form-side">
         <h1>SignUp</h1>
-        <form>
-            <input type="text" name="email" placeholder="email">
-            <input type="text" name="username" placeholder="username">
-            <input type="text" name="password" placeholder="password">
-            <input type="text" name="confirm_password" placeholder="confirm password">
+        <form id="myFormRegister">
+            <input type="text" name="email" placeholder="email" id="email">
+            <input type="text" name="username" placeholder="username" id="username">
+            <input type="text" name="password" placeholder="password" id="password">
+            <input type="text" name="confirm_password" placeholder="confirm password" id="confirm_password">
             <input type="button" name="SignUpButton" value="SignUp">
         </form>
         <p>Or signup with</p>
