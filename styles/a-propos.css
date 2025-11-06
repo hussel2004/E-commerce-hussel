@@ -1,0 +1,45 @@
+/* Styles pour la page À Propos */
+
+.a-propos-intro {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+.nos-valeurs {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.valeur-item {
+    width: 30%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.valeur-item img {
+    width: 80px; /* Assurez-vous d'avoir des images dans /assets/images */
+    margin-bottom: 10px;
+}
+
+.notre-equipe {
+    text-align: center;
+}
+
+.equipe-membre {
+    display: inline-block;
+    width: 200px;
+    margin: 20px;
+}
+
+.equipe-membre img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%; /* Image circulaire */
+    margin-bottom: 10px;
+}
+/*hfhfh*/

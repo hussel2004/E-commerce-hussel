@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard Client - E-commerce</title>
+    <link rel="stylesheet" href="../styles/mon-compte.css">
+    <style>
+        /* Styles pour rendre le défilement (scroll) plus fluide */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <nav class="sidebar">
+        <ul>
+            <li><a href="#resume" class="nav-link">Résumé du compte</a></li>
+            <li><a href="#fidelite" class="nav-link">Points de fidélité</a></li>
+            <li><a href="#historique" class="nav-link">Historique des commandes</a></li>
+            <li><a href="#consultes" class="nav-link">Produits consultés</a></li>
+        </ul>
+    </nav>
+
+    <main id="content-area">
+        <section id="resume" class="card">
+            <h2>Résumé du compte</h2>
+            <div id="resume-content">
+                <p>Date de création : <strong id="compte-date-creation">Chargement...</strong></p>
+                <p>Nombre Total de commandes : <strong id="compte-total-commandes">Chargement...</strong></p>
+            </div>
+        </section>
+
+        <section id="fidelite" class="card">
+            <h2>Points de fidélité</h2>
+            <div id="fidelite-content">
+                <p>Total points : <strong id="fidelite-points">Chargement...</strong></p>
+                <p>Récompenses disponibles : <strong id="fidelite-recompenses">Chargement...</strong></p>
+            </div>
+        </section>
+
+        <section id="historique" class="card">
+            <h2>Historique des commandes</h2>
+            <div id="historique-content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Code Commande</th>
+                            <th>Date</th>
+                            <th>Statut</th>
+                            <th>Montant</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="history-body">
+                        </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="consultes" class="card">
+            <h2>Produits consultés récemment</h2>
+            <div id="consultes-content">
+                <ul id="consulted-list">
+                    </ul>
+            </div>
+        </section>
+    </main>
+
+    <script src="../Scripts/mon-compte.js"></script> 
+</body>
+</html>
+

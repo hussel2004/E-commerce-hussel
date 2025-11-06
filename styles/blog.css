@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #fff;
+    color: #222;
+}
+
+h1, h2 {
+    color: #222;
+}
+h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* ========== Blog Hero ========== */
+.blog-hero {
+    background-color: #f5f5f5;
+    padding: 60px 20px;
+    text-align: center;
+}
+.blog-hero .hero-text h1 {
+    font-size: 52px;
+    margin-bottom: 10px;
+}
+.blog-hero .hero-text p {
+    font-size: 18px;
+}
+
+/* ========== Liste des articles ========== */
+.blog-list {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.blog-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.blog-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 16rem;
+}
+
+.blog-info {
+    padding: 20px;
+}
+
+.blog-info h2 {
+    margin-bottom: 12px;
+    font-size: 22px;
+}
+
+.blog-info p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.blog-info .date {
+    font-size: 14px;
+    color: #999;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 900px) {
+    .blog-list {
+        gap: 20px;
+    }
+}
