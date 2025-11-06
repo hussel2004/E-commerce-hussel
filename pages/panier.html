@@ -9,72 +9,67 @@
 <body>
 
   <div class="cart-container">
-
-    <!-- TITRE ET BOUTON -->
     <div class="cart-header">
-      <h1>Mon Panier</h1>
-      <button class="continue-btn">Continuer vos achats</button>
+      <h1>My Cart</h1>
+      <button class="continue-btn">Continue Shopping</button>
     </div>
 
-    <!-- EN-TÊTE DE TABLE -->
     <div class="cart-header-row">
-      <span>Produit</span>
-      <span>Prix</span>
-      <span>Quantité</span>
+      <span>Product</span>
+      <span>Price</span>
+      <span>Quantity</span>
       <span>Total</span>
+      <span></span>
     </div>
 
-    <!-- PRODUIT 1 -->
     <div class="cart-item">
       <div class="product">
         <img src="../assets/images/iphone.webp" alt="iphone 17">
         <div>
-          <h3>iphone 17</h3>
-          <button class="remove-btn">Supprimer</button>
+          <h3>iPhone 17</h3>
         </div>
       </div>
-      <div class="price">499.00 €</div>
+      <div class="price">499.00</div>
       <div class="quantity">
         <button class="qty-btn minus">−</button>
         <span>1</span>
         <button class="qty-btn plus">+</button>
       </div>
-      <div class="total">499.00 €</div>
+      <div class="total">499.00</div>
+      <button class="remove-btn"></button>
     </div>
 
-    <!-- PRODUIT 2 -->
     <div class="cart-item">
       <div class="product">
-        <img src="../assets/images/gwatch.jpg" alt="airpod-better">
+        <img src="../assets/images/iphone+airpod-collection.jpg" alt="airpod">
         <div>
-          <h3>airpod-better</h3>
-          <button class="remove-btn">Supprimer</button>
+          <h3>AirPods Pro</h3>
         </div>
       </div>
-      <div class="price">200.00 €</div>
+      <div class="price">199.00</div>
       <div class="quantity">
         <button class="qty-btn minus">−</button>
         <span>1</span>
         <button class="qty-btn plus">+</button>
       </div>
-      <div class="total">200.00 €</div>
+      <div class="total">398.00</div>
+      <button class="remove-btn"></button>
     </div>
 
-    <!-- RÉSUMÉ DU PANIER -->
     <div class="summary">
       <div class="line">
-        <span>Sous-total</span>
-        <span class="subtotal-value">0.00 €</span>
+        <span>Subtotal</span>
+        <span class="subtotal-value">897.00</span>
       </div>
       <div class="total-line">
         <span>Total</span>
-        <span class="total-value">0.00 €</span>
+        <span class="total-value">897.00</span>
       </div>
-      <button class="checkout">Passer la commande</button>
+      <button class="checkout">Checkout</button>
     </div>
-
   </div>
 
+</body>
   <script src="../Scripts/panier.js" defer></script>
 </body>
 </html>
