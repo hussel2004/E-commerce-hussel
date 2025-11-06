@@ -4,86 +4,69 @@
     <meta charset="UTF-8">
     <title>Dashboard Client - E-commerce</title>
     <link rel="stylesheet" href="../styles/mon-compte.css">
+    <style>
+        /* Styles pour rendre le défilement (scroll) plus fluide */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 <body>
     <nav class="sidebar">
         <ul>
-            <li><a href="#resume">Résumé du compte</a></li>
-            <li><a href="#fidelite">Points de fidélité</a></li>
-            <li><a href="#historique">Historique des commandes</a></li>
-            <li><a href="#consultes">Produits consultés</a></li>
+            <li><a href="#resume" class="nav-link">Résumé du compte</a></li>
+            <li><a href="#fidelite" class="nav-link">Points de fidélité</a></li>
+            <li><a href="#historique" class="nav-link">Historique des commandes</a></li>
+            <li><a href="#consultes" class="nav-link">Produits consultés</a></li>
         </ul>
     </nav>
 
-    <main>
-     
+    <main id="content-area">
         <section id="resume" class="card">
             <h2>Résumé du compte</h2>
-            <p>Date de création : <strong>15 Janvier 2022</strong></p>
-            <p>Nombre Total de commandes : <strong>56</strong></p>
+            <div id="resume-content">
+                <p>Date de création : <strong id="compte-date-creation">Chargement...</strong></p>
+                <p>Nombre Total de commandes : <strong id="compte-total-commandes">Chargement...</strong></p>
+            </div>
         </section>
 
-        <!-- Fidélité -->
         <section id="fidelite" class="card">
             <h2>Points de fidélité</h2>
-            <p>Total points : <strong>520</strong></p>
-            <p>Récompenses disponibles : <strong>2 bons d’achat</strong></p>
+            <div id="fidelite-content">
+                <p>Total points : <strong id="fidelite-points">Chargement...</strong></p>
+                <p>Récompenses disponibles : <strong id="fidelite-recompenses">Chargement...</strong></p>
+            </div>
         </section>
 
-        <!-- Historique -->
         <section id="historique" class="card">
             <h2>Historique des commandes</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Code Commande</th>
-                        <th>Date</th>
-                        <th>Statut</th>
-                        <th>Montant</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>A2025-001</td>
-                        <td>01/09/2025</td>
-                        <td>Livrée</td>
-                        <td>$230</td>
-                        <td><a href="#">Détails</a> | <a href="#">Télécharger facture</a></td>
-                    </tr>
-                    <tr>
-                        <td>A2025-002</td>
-                        <td>15/09/2025</td>
-                        <td>Livrée</td>
-                        <td>$120</td>
-                        <td><a href="#">Détails</a> | <a href="#">Télécharger facture</a></td>
-                    </tr>
-                    <tr>
-                        <td>A2025-003</td>
-                        <td>28/09/2025</td>
-                        <td>En attente</td>
-                        <td>$86</td>
-                        <td><a href="#">Détails</a> | <a href="#">Télécharger facture</a></td>
-                    </tr>
-                </tbody>
-            </table>
-
+            <div id="historique-content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Code Commande</th>
+                            <th>Date</th>
+                            <th>Statut</th>
+                            <th>Montant</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="history-body">
+                        </tbody>
+                </table>
+            </div>
         </section>
 
-        <!-- Retours -->
-        <section class="card">
-            <h2>Retours & Réclamations</h2>
-            <p>Aucun retour en cours.</p>
-        </section>
-
-        <!-- Produits consultés -->
         <section id="consultes" class="card">
             <h2>Produits consultés récemment</h2>
-            <ul>
-                <li>Écran 27" 4K</li>
-                <li>Clé USB 128Go</li>
-            </ul>
+            <div id="consultes-content">
+                <ul id="consulted-list">
+                    </ul>
+            </div>
         </section>
     </main>
+
+    <script src="../Scripts/mon-compte.js"></script> 
 </body>
 </html>
+
