@@ -5,230 +5,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>E-Shop - About Us</title>
         <link rel="stylesheet" href="../styles/home.css">
-        <link rel="stylesheet" href="../assets/css/global.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link rel="stylesheet" href="../styles/a-propos.css">
+  
         
-        <style>
-            .about-hero {
-                max-width: 1100px;
-                margin: 40px auto;
-                padding: 30px;
-                background: linear-gradient(180deg, rgba(143,37,60,0.04), rgba(143,37,60,0.02));
-                border-radius: 10px;
-            }
-            
-            .about-intro {
-                text-align: center;
-                margin-bottom: 50px;
-            }
-            
-            .values-section {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-                gap: 30px;
-                margin: 40px 0;
-            }
-            
-            .value-card {
-                background: white;
-                padding: 25px;
-                border-radius: 8px;
-                text-align: center;
-                box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            }
-            
-            .value-card img {
-                width: 80px;
-                height: 80px;
-                margin-bottom: 15px;
-            }
-            
-            .team-section {
-                text-align: center;
-                margin-top: 60px;
-            }
-            
-            .team-member {
-                max-width: 300px;
-                margin: 30px auto;
-                padding: 20px;
-                background: white;
-                border-radius: 8px;
-                box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            }
-            
-            .team-member img {
-                width: 150px;
-                height: 150px;
-                border-radius: 50%;
-                object-fit: cover;
-                margin-bottom: 15px;
-            }
-            
-            h1, h2 {
-                color: #8f253c;
-                margin-bottom: 20px;
-            }
-            /* Responsive styles */
-            @media screen and (max-width: 768px) {
-                .about-hero {
-                    margin: 20px auto;
-                    padding: 20px 15px;
-                }
-
-                .values-section {
-                    grid-template-columns: 1fr;
-                    gap: 20px;
-                }
-
-                .value-card {
-                    max-width: 100%;
-                    padding: 20px 15px;
-                }
-
-                .team-member {
-                    max-width: 100%;
-                    margin: 20px auto;
-                }
-
-                h1 {
-                    font-size: 24px;
-                }
-
-                h2 {
-                    font-size: 20px;
-                }
-
-                .about-intro p {
-                    font-size: 16px;
-                    line-height: 1.5;
-                    padding: 0 15px;
-                }
-            }
-
-            @media screen and (max-width: 480px) {
-                .about-hero {
-                    margin: 10px;
-                    padding: 15px 10px;
-                }
-
-                .value-card img {
-                    width: 60px;
-                    height: 60px;
-                }
-
-                .team-member img {
-                    width: 120px;
-                    height: 120px;
-                }
-
-                footer {
-                    padding: 20px 10px;
-                }
-
-                footer .col {
-                    padding: 15px !important;
-                }
-            }
-
-            /* Improve navigation responsiveness */
-            @media screen and (max-width: 992px) {
-                #navbar-container {
-                    padding: 15px;
-                }
-                
-                .hamburger {
-                    display: block;
-                }
-
-                #navbar {
-                    display: none;
-                    width: 100%;
-                    position: absolute;
-                    top: 70px;
-                    left: 0;
-                    background: white;
-                    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-                }
-
-                #navbar.active {
-                    display: block;
-                }
-
-                #navbar li {
-                    margin: 10px 0;
-                    padding: 10px 20px;
-                    width: 100%;
-                }
-
-                .dropdown {
-                    position: static;
-                    width: 100%;
-                    display: none;
-                    box-shadow: none;
-                    padding: 10px 0;
-                }
-
-                #navbar li:hover .dropdown {
-                    display: block;
-                }
-            }
-
-            /* Add smooth transitions */
-            .value-card, .team-member {
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-            }
-
-            .value-card:hover, .team-member:hover {
-                transform: translateY(-5px);
-                box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-            }
-        </style>
     </head>
     <body>
-        <!-- <header>            
-            <div id="navbar-container">
-                <a id="brand-name" href="../index.html">E-Shop</a>
-
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-
-                <ul id="navbar">
-                    <li>
-                        <a class="no-underline options" href="products.html">Browse Categories</a>
-                        <ul class="dropdown">
-                            <li><a class="no-underline" href="category.html?cat=Computers">Computers</a></li>
-                            <li><a class="no-underline" href="category.html?cat=Smartphones">Smartphones</a></li>
-                            <li><a class="no-underline" href="category.html?cat=Cameras">Cameras</a></li>
-                            <li><a class="no-underline" href="category.html?cat=Smart watches">Smart watches</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="no-underline options" href="promotions.html">🔥Super Deals</a></li>
-                    <li><a class="no-underline options" href="a-propos.html">About</a></li>
-                    <li><a class="no-underline options" href="contact.html">Contact</a></li>
-                    <li><a class="no-underline options" href="login-page.html"><i class="fa-solid fa-cart-shopping"></i><span>Cart</span></a></li>
-                    <li><a class="no-underline user-login options" href="register-page.html"><i class="fa-solid fa-user"></i><span class="login-text">Hello, <strong>Login/Sign Up</strong></span></a></li>
-                </ul>
-            </div>
-        </header> -->
-
-        <header>
-            <div id="navbar-container" style="margin:30px auto 20px;">
-            <a id="brand-name" class="no-underline" href="../index.html">E-Shop</a>
-            <a class="no-underline" href="../index.html" style="margin-left:auto; padding:8px 12px; border-radius:6px; background:#f0f0f0;">Back</a>
-            </div>
-        </header>
-
         <main class="about-hero">
-            <h1>Our Story & Values</h1>
+            <h1>About Us</h1>
             
             <section class="about-intro">
-                <p>Welcome to POLYTECHNIC WX! Our journey began in 2020 with a simple idea...</p>
+                <p style="
+                    font-size: 16px;
+                    text-align: justify;
+                    ">Welcome to <strong style="color:#8f253c">E-commerce</strong>, your one-stop shop for the latest and smartest gadgets on the market. We're passionate about innovation and beleive technology should make life easier, more fun, and more connected. From cutting-edge smartwatches and Wireless earbuds to powerful laptops and unique accessories, our misson is to bring you <strong style="color: black;">quality</strong>, <strong style="color: black;">affordability</strong>, and <strong style="color: black;">reliability</strong> all in one place</p>
             </section>
-
+            <h1>Why Choose Us</h1>
             <section class="values-section">
                 <div class="value-card">
                     <img src="../assets/images/eco.png" alt="Sustainability Icon">
@@ -240,90 +31,47 @@
                     <h3>Quality</h3>
                     <p>Each product is carefully selected and tested for maximum durability.</p>
                 </div>
+                                <div class="value-card">
+                    <img src="../assets/images/speed.png" alt="Quality Icon">
+                    <h3>Speed</h3>
+                    <p>We offer Fast and secure shipping</p>
+                </div>
             </section>
 
             <section class="team-section">
                 <h2>Meet Our Team</h2>
-                <div class="team-member">
-                    <img src="../assets/images/personne1.jpg" alt="Photo of Bakotcha Loic">
-                    <h4>Bakotcha Loic</h4>
-                    <p>Founder & CEO</p>
+                <div class="allTeam">
+                    <div class="team-member">
+                        <img src="../assets/images/personne2.jpeg" alt="Photo of Bakotcha Loic">
+                        <h4>Bakotcha Loic</h4>
+                        <p>Founder & CEO</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="../assets/images/personne2.jpeg" alt="Photo of Bakotcha Loic">
+                        <h4>Arreyntow Kerone</h4>
+                        <p>Marketing Strategist</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="../assets/images/personne2.jpeg" alt="Photo of Bakotcha Loic">
+                        <h4>Frank Zeff</h4>
+                        <p>Product Analyst</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="../assets/images/personne2.jpeg" alt="Photo of Bakotcha Loic">
+                        <h4>Pipo Koba</h4>
+                        <p>Head of Customer Relation</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="../assets/images/personne2.jpeg" alt="Photo of Bakotcha Loic">
+                        <h4>Hestehga Sav</h4>
+                        <p>Human Resource Manager</p>
+                    </div>
                 </div>
+
             </section>
         </main>
 
-        <footer class="section-p1">
-            <div class="col" style="padding-left: 30px;">
-                <a id="brand-name" style="margin-bottom: 30px;" href="../index.html">E-Shop</a>
-                <h4>Contact</h4>
-                <p><strong>Address: </strong>National Advanced School of Engineering of Yaounde(NASEY), Melen</p>
-                <p><strong>Phone: </strong> +237 677461149</p>
-                <p><strong>Hours: </strong> 8:00 - 17:45, Mon - Fri</p>
-                <div class="follow">
-                    <h4>Follow Us</h4>
-                    <div class="icon">
-                        <i class="fab fa-facebook-f"></i>
-                        <i class="fab fa-twitter"></i>
-                        <i class="fab fa-instagram"></i>
-                        <i class="fab fa-pinterest-p"></i>
-                        <i class="fab fa-youtube"></i>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <h4>About</h4>
-                <a href="a-propos.html">About us</a>
-                <a href="#">Delivery Information</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms & Conditions</a>
-                <a href="contact.html">Contact Us</a>
-            </div>
-            <div class="col">
-                <h4>My Account</h4>
-                <a href="login-page.html">Sign In</a>
-                <a href="#">View Cart</a>
-                <a href="#">My Wishlist</a>
-                <a href="#">Track My Order</a>
-                <a href="#">Help</a>
-            </div>
-
-            <div class="col install">
-                <h4>Install App</h4>
-                <p>From App Store or Google Play</p>
-                <div class="row">
-                    <img src="../assets/images/app.jpg" alt="">
-                    <img src="../assets/images/play.jpg" alt="">
-                </div>
-                <p>Secured Payment Gateways</p>
-                <img src="../assets/images/pay.png" alt="">
-            </div>
-
-            <div class="copyright">
-                <p>2025, 4GI - HTML CSS E-commerce site</p>
-            </div>
-        </footer>
-
-        <script src="../Scripts/home.js"></script>
-        <script>
-            // Mobile menu toggle
-            const hamburger = document.querySelector('.hamburger');
-            const navbar = document.querySelector('#navbar');
-
-            if (hamburger) {
-                hamburger.addEventListener('click', () => {
-                    hamburger.classList.toggle('active');
-                    navbar.classList.toggle('active');
-                });
-            }
-
-            // Close mobile menu when clicking outside
-            document.addEventListener('click', (e) => {
-                if (!hamburger?.contains(e.target) && !navbar?.contains(e.target)) {
-                    hamburger?.classList.remove('active');
-                    navbar?.classList.remove('active');
-                }
-            });
-        </script>
+        <script src="../Scripts/a-propo.js"></script>
+        
     </body>
 </html>
