@@ -1,83 +1,80 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paiement - E-commerce</title>
-    <link rel="stylesheet" href="../styles/paiement.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paiement - E-commerce</title>
+  <link rel="stylesheet" href="../styles/paiement.css">
+  <script defer src="../Scripts/paiement.js"></script>
 </head>
 <body>
-    <header class="main-header">
-        <div class="logo">
-            <a href="../index.html">Site e-commerce</a>
+
+  <main class="payment-container">
+    <section class="payment-form">
+      <h1>Finaliser le paiement</h1>
+
+      <form id="formPaiement">
+        <h2>Informations personnelles</h2>
+        <div class="form-group">
+          <label>Nom</label>
+          <input type="text" id="nom" placeholder="Votre nom complet" required>
         </div>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Accueil</a></li>
-                <li><a href="#">Produits</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">À propos</a></li>
-            </ul>
-        </nav>
-    </header>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" id="email" placeholder="exemple@mail.com" required>
+        </div>
 
-    <main class="payment-container">
-        <section class="payment-form">
-            <h1>Finaliser le paiement</h1>
+        <h2>Adresse de livraison</h2>
+        <div class="form-group">
+          <label>Adresse</label>
+          <input type="text" id="adresse" placeholder="Rue, immeuble, etc." required>
+        </div>
+        <div class="form-group">
+          <label>Ville</label>
+          <input type="text" id="ville" required>
+        </div>
+        <div class="form-group">
+          <label>Code postal</label>
+          <input type="text" id="codePostal" required>
+        </div>
 
-            <form action="paiement_reussi.html" method="get">
-                <h2>Informations personnelles</h2>
-                <div class="form-group">
-                    <label>Nom</label>
-                    <input type="text" placeholder="Votre nom complet" required>
-                </div>
-                <div class="form-group">
-                    <label>Email</label>
-                    <input type="email" placeholder="exemple@mail.com" required>
-                </div>
+        <h2>Informations de paiement</h2>
+        <div class="form-group">
+          <label>Type de carte</label>
+          <select id="typeCarte" required>
+            <option value="">-- Sélectionnez --</option>
+            <option>Visa</option>
+            <option>MasterCard</option>
+            <option>American Express</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Numéro de carte</label>
+          <input type="text" id="numeroCarte" maxlength="16" placeholder="XXXX XXXX XXXX XXXX" required>
+        </div>
+        <div class="form-inline">
+          <div class="form-group">
+            <label>Date d'expiration</label>
+            <input type="month" id="dateExpiration" required>
+          </div>
+          <div class="form-group">
+            <label>CVC</label>
+            <input type="text" id="cvc" maxlength="3" required>
+          </div>
+        </div>
 
-                <h2>Adresse de livraison</h2>
-                <div class="form-group">
-                    <label>Adresse</label>
-                    <input type="text" placeholder="Rue, immeuble, etc." required>
-                </div>
-                <div class="form-group">
-                    <label>Ville</label>
-                    <input type="text" required>
-                </div>
-                
-                <h2>Informations de paiement</h2>
-                <div class="form-group">
-                    <label>Type de carte</label>
-                    <select required>
-                        <option>Visa</option>
-                        <option>MasterCard</option>
-                        <option>American Express</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>Numéro de carte</label>
-                    <input type="text" maxlength="16" placeholder="XXXX XXXX XXXX XXXX" required>
-                </div>
-                <div class="form-inline">
-                    <div class="form-group">
-                        <label>Date d'expiration</label>
-                        <input type="month" required>
-                    </div>
-                    <div class="form-group">
-                        <label>CVC</label>
-                        <input type="text" maxlength="3" required>
-                    </div>
-                </div>
+        <button type="submit" class="btn-validate">Valider le paiement</button>
+      </form>
 
-                <button type="submit" class="btn-validate">Valider le paiement</button>
-            </form>
-        </section>
+      <div id="messageProcessing" class="processing-message" style="display:none;">
+        💳 Traitement en cours<span class="dots"></span>
+      </div>
+    </section>
 
-        <aside class="order-summary">
-            <h2>Récapitulatif de commande</h2>
-            <table>
-                <tr>
+    <aside class="order-summary">
+      <h2>Récapitulatif de commande</h2>
+      <table id="orderTable">
+        <tr>
                     <th>Produit</th>
                     <th>Quantité</th>
                     <th>Prix</th>
@@ -96,9 +93,9 @@
                     <td colspan="2">Total</td>
                     <td>1270€</td>
                 </tr>
-            </table>
-        </aside>
-    </main>
+      </table>
+    </aside>
+  </main>
 
 </body>
 </html>
