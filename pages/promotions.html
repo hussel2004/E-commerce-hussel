@@ -1,65 +1,62 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Promotions – E-Shop</title>
     <link rel="stylesheet" href="../styles/promotions.css" />
+    <link rel="stylesheet" href="../styles/home.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 </head>
 <body>
-    <!-- Navbar — tu peux réutiliser le code de ta home -->
-    <!-- <header>
+    <header>            
         <div id="navbar-container">
-            <a id="brand-name" href="index.html">E-Shop</a>
+            <a id="brand-name" href="../index.html">E-Shop</a>
+            <!-- For hamburger menu -->
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
             <ul id="navbar">
                 <li>
-                    <a class="no-underline options" href="#">Browse Categories</a>
+                    <a class="no-underline options" href="products.html">Browse Categories </a>
                     <ul class="dropdown">
-                        <li><a class="no-underline" href="#">Computers</a></li>
-                        <li><a class="no-underline" href="#">Smartphones</a></li>
-                        <li><a class="no-underline" href="#">Cameras</a></li>
-                        <li><a class="no-underline" href="#">Smart watches</a></li>
+                        <li><a class="no-underline" href="category.html?cat=Computers">Computers</a></li>
+                        <li><a class="no-underline" href="category.html?cat=Smartphones">Smartphones</a></li>
+                        <li><a class="no-underline" href="category.html?cat=Cameras">Cameras</a></li>
+                        <li><a class="no-underline" href="category.html?cat=Smart watches">Smart watches</a></li>
                     </ul>
                 </li>
-                <li><a class="no-underline options" href="#">🔥Super Deals</a></li>
-                <li><a class="no-underline options" href="#">About</a></li>
-                <li><a class="no-underline options" href="#">Contact</a></li>
-                <li><a class="no-underline options" href="#"><i class="fa-solid fa-cart-shopping"></i><span>Cart</span></a></li>
-                <li><a class="no-underline user-login options" href="#"><i class="fa-solid fa-user"></i>
-                        <span class="login-text">Hello, <strong>Login/Sign Up</strong></span>
-                    </a></li>
+                <li><a class="no-underline options" href="promotions.html">Super Deals</a></li>
+                <li><a class="no-underline options" href="a-propos.html">About</a></li>
+                <li><a class="no-underline options" href="contact.html">Contact</a></li>
+                <li><a class="no-underline options" href="login-page.html"><i class="fa-solid fa-cart-shopping"></i><span>Cart</span></a></li>
+                <li style="padding: 30px;"><a class="no-underline user-login options" href="pages/register-page.html"><i class="fa-solid fa-user"></i></a></li>
             </ul>
         </div>
-    </header> -->
-
-        <header>
-            <div id="navbar-container" style="margin:30px auto 20px;">
-            <a id="brand-name" class="no-underline" href="../index.html">E-Shop</a>
-            <a class="no-underline" href="../index.html" style="margin-left:auto; padding:8px 12px; border-radius:6px; background:#f0f0f0;">Back</a>
-            </div>
-        </header>
+    </header>
 
     <main>
-        <!-- Section Hero -->
+        <!-- Hero Section -->
         <section class="promo-hero">
             <div class="promo-banner">
-                <h1>Offres Exceptionnelles</h1>
-                <p>Profitez de réductions incroyables dès maintenant !</p>
+                <h1>Exceptional Offers</h1>
+                <p>Enjoy incredible discounts right now!</p>
             </div>
         </section>
 
-        <!-- Offre à durée limitée -->
+        <!-- Limited-time offer -->
         <section class="limited-offer">
-            <h2>Offre à durée limitée</h2>
+            <h2>Limited Time Offer</h2>
             <div class="countdown-container">
                 <div class="time-box">
                     <span class="time" id="days">00</span>
-                    <span class="label">Jours</span>
+                    <span class="label">Days</span>
                 </div>
                 <div class="time-box">
                     <span class="time" id="hours">00</span>
-                    <span class="label">Heures</span>
+                    <span class="label">Hours</span>
                 </div>
                 <div class="time-box">
                     <span class="time" id="minutes">00</span>
@@ -67,31 +64,94 @@
                 </div>
                 <div class="time-box">
                     <span class="time" id="seconds">00</span>
-                    <span class="label">Secondes</span>
+                    <span class="label">Seconds</span>
                 </div>
             </div>
         </section>
 
-        <!-- Grille de produits soldés -->
+        <!-- Sale product grid -->
         <section class="sale-grid">
-            <h2>Produits en promotion</h2>
+            <h2>Products on Sale</h2>
 
-            <!-- (optionnel) Boutons de tri/filtre -->
+            <!-- (optional) Sort/filter controls -->
             <div class="controls">
-                <label for="sort-select">Trier par :</label>
+                <label for="sort-select">Sort by :</label>
                 <select id="sort-select">
-                    <option value="default">Par défaut</option>
-                    <option value="price-asc">Prix croissant</option>
-                    <option value="price-desc">Prix décroissant</option>
+                    <option value="default">Default</option>
+                    <option value="price-asc">Price: Low to High</option>
+                    <option value="price-desc">Price: High to Low</option>
                 </select>
             </div>
 
             <div class="products-container" id="products-container">
-                <!-- Les produits seront injectés dynamiquement -->
+                <!-- Products will be injected dynamically -->
             </div>
         </section>
     </main>
 
+        <section class="newsletter" style="margin-top: 100px;">
+            <div class="newstext">
+                <h4 style="font-size: 22px; font-weight: 700; color: white;">Sign Up For Our Newsletter</h4>
+                <p style="font-size: 14px; font-weight: 600;">Get E-mail updates about our latest shop and <span style="color: #8f253c;">special offers</span></p>
+            </div>
+            <div class="form">
+                <input type="text" placeholder="Your email address">
+                <button class="normal">Sign Up</button>
+            </div>
+        </section>
+
+        <footer class="section-p1">
+            <div class="col" style="padding-left: 30px;">
+                <a id="brand-name" style="margin-bottom: 30px;" href="../index.html">E-Shop</a>
+                <h4>Contact</h4>
+                <p><strong>Address: </strong>National Advanced School of Engineering of Yaounde(NASEY), Melen</p>        
+                <p><strong>Phone: </strong> +237 696 696 696</p>
+                <p><strong>Hours: </strong> 8:00 - 17:45, Mon - Fri</p>
+                <div class="follow">
+                    <h4>Follow Us</h4>
+                    <div class="icon">
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-pinterest-p"></i>
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <h4>About</h4>
+                <a href="a-propos.html">About us</a>
+                <a href="retours.html">Delivery Information</a>
+                <a href="confidentialite.html">Privacy Policy</a>
+                <a href="">Terms & Conditions</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+            <div class="col">
+                <h4>My Account</h4>
+                <a href="login-page.html">Sign In</a>
+                <a href="login-page.html">View Cart</a>
+                <a href="">My Wishlist</a>
+                <a href="">Track My Order</a>
+                <a href="faq.html">Help</a>
+            </div>
+
+            <div class="col install">
+                <h4>Install App</h4>
+                <p>From App Store or Google Play</p>
+                <div class="row">
+                    <img src="../assets/images/app.jpg" alt="">
+                    <img src="../assets/images/play.jpg" alt="">
+                </div>
+                <p>Secured Payment Gateways</p>
+                <img src="../assets/images/pay.png" alt="">
+            </div>
+
+            <div class="copyright">
+                <p>2025, 4GI - HTML CSS E-commerce site</p>
+            </div>
+
+        </footer>
     <script src="../Scripts/promotions.js"></script>
 </body>
 </html>

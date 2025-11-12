@@ -1,101 +1,174 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Paiement - E-commerce</title>
-  <link rel="stylesheet" href="../styles/paiement.css">
-  <script defer src="../Scripts/paiement.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - E-Shop</title>
+    <link rel="stylesheet" href="../styles/paiement.css">
+    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
+    <header>            
+            <div id="navbar-container">
+                <a id="brand-name" href="../index.html">E-Shop</a>
+                <!-- For hamburger menu -->
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul id="navbar">
+                    <li>
+                        <a class="no-underline options" href="products.html">Browse Categories </a>
+                        <ul class="dropdown">
+                            <li><a class="no-underline" href="category.html?cat=Computers">Computers</a></li>
+                            <li><a class="no-underline" href="category.html?cat=Smartphones">Smartphones</a></li>
+                            <li><a class="no-underline" href="category.html?cat=Cameras">Cameras</a></li>
+                            <li><a class="no-underline" href="category.html?cat=Smart watches">Smart watches</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="no-underline options" href="promotions.html">Super Deals</a></li>
+                    <li><a class="no-underline options" href="a-propos.html">About</a></li>
+                    <li><a class="no-underline options" href="contact.html">Contact</a></li>
+                    <li><a class="no-underline options" href="login-page.html"><i class="fa-solid fa-cart-shopping"></i><span>Cart</span></a></li>
+                    <li style="padding: 30px;"><a class="no-underline user-login options" href="register-page.html"><i class="fa-solid fa-user"></i></a></li>
 
-  <main class="payment-container">
-    <section class="payment-form">
-      <h1>Finaliser le paiement</h1>
 
-      <form id="formPaiement">
-        <h2>Informations personnelles</h2>
-        <div class="form-group">
-          <label>Nom</label>
-          <input type="text" id="nom" placeholder="Votre nom complet" required>
-        </div>
-        <div class="form-group">
-          <label>Email</label>
-          <input type="email" id="email" placeholder="exemple@mail.com" required>
-        </div>
+                </ul>
+            </div>
+        </header>
 
-        <h2>Adresse de livraison</h2>
-        <div class="form-group">
-          <label>Adresse</label>
-          <input type="text" id="adresse" placeholder="Rue, immeuble, etc." required>
-        </div>
-        <div class="form-group">
-          <label>Ville</label>
-          <input type="text" id="ville" required>
-        </div>
-        <div class="form-group">
-          <label>Code postal</label>
-          <input type="text" id="codePostal" required>
-        </div>
+    <main class="payment-container">
+        <section class="payment-form">
+            <h1>Complete Payment</h1>
 
-        <h2>Informations de paiement</h2>
-        <div class="form-group">
-          <label>Type de carte</label>
-          <select id="typeCarte" required>
-            <option value="">-- Sélectionnez --</option>
-            <option>Visa</option>
-            <option>MasterCard</option>
-            <option>American Express</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label>Numéro de carte</label>
-          <input type="text" id="numeroCarte" maxlength="16" placeholder="XXXX XXXX XXXX XXXX" required>
-        </div>
-        <div class="form-inline">
-          <div class="form-group">
-            <label>Date d'expiration</label>
-            <input type="month" id="dateExpiration" required>
-          </div>
-          <div class="form-group">
-            <label>CVC</label>
-            <input type="text" id="cvc" maxlength="3" required>
-          </div>
-        </div>
+            <form action="paiement_reussi.html" method="get">
+                <h2>Personal Information</h2>
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" placeholder="Your full name" required>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="example@mail.com" required>
+                </div>
 
-        <button type="submit" class="btn-validate">Valider le paiement</button>
-      </form>
+                <h2>Shipping Address</h2>
+                <div class="form-group">
+                    <label>Address</label>
+                    <input type="text" placeholder="Street, building, etc." required>
+                </div>
+                <div class="form-group">
+                    <label>City</label>
+                    <input type="text" required>
+                </div>
+                
+                <h2>Payment Information</h2>
+                <div class="form-group">
+                    <label>Card Type</label>
+                    <select required>
+                        <option>Visa</option>
+                        <option>MasterCard</option>
+                        <option>American Express</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Card Number</label>
+                    <input type="text" maxlength="16" placeholder="XXXX XXXX XXXX XXXX" required>
+                </div>
+                <div class="form-inline">
+                    <div class="form-group">
+                        <label>Expiration Date</label>
+                        <input type="month" required>
+                    </div>
+                    <div class="form-group">
+                        <label>CVC</label>
+                        <input type="text" maxlength="3" required>
+                    </div>
+                </div>
 
-      <div id="messageProcessing" class="processing-message" style="display:none;">
-        💳 Traitement en cours<span class="dots"></span>
-      </div>
-    </section>
+                <button type="submit" class="btn-validate">Confirm Payment</button>
+            </form>
+        </section>
 
-    <aside class="order-summary">
-      <h2>Récapitulatif de commande</h2>
-      <table id="orderTable">
-        <tr>
-                    <th>Produit</th>
-                    <th>Quantité</th>
-                    <th>Prix</th>
+        <aside class="order-summary">
+            <p style="font-size: 35px;">Order Summary</p>
+            <table>
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
                 </tr>
                 <tr>
                     <td>Samsung Galaxy S25 Ultra</td>
                     <td>1</td>
-                    <td>1150€</td>
+                    <td>€1150</td>
                 </tr>
                 <tr>
-                    <td>Apple watch Noir</td>
+                    <td>Apple Watch Black</td>
                     <td>1</td>
-                    <td>120€</td>
+                    <td>€120</td>
                 </tr>
                 <tr class="total">
                     <td colspan="2">Total</td>
-                    <td>1270€</td>
+                    <td>€1270</td>
                 </tr>
-      </table>
-    </aside>
-  </main>
+            </table>
+        </aside>
+    </main>
 
+        <footer class="section-p1">
+            <div class="col" style="padding-left: 30px;">
+                <a id="brand-name" style="margin-bottom: 30px;" href="../index.html">E-Shop</a>
+                <h4>Contact</h4>
+                <p><strong>Address: </strong>National Advanced School of Engineering of Yaounde(NASEY), Melen</p>        
+                <p><strong>Phone: </strong> +237 696 696 696</p>
+                <p><strong>Hours: </strong> 8:00 - 17:45, Mon - Fri</p>
+                <div class="follow">
+                    <h4>Follow Us</h4>
+                    <div class="icon">
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-pinterest-p"></i>
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <h4>About</h4>
+                <a href="a-propos.html">About us</a>
+                <a href="retours.html">Delivery Information</a>
+                <a href="confidentialite.html">Privacy Policy</a>
+                <a href="">Terms & Conditions</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+            <div class="col">
+                <h4>My Account</h4>
+                <a href="login-page.html">Sign In</a>
+                <a href="login-page.html">View Cart</a>
+                <a href="">My Wishlist</a>
+                <a href="">Track My Order</a>
+                <a href="faq.html">Help</a>
+            </div>
+
+            <div class="col install">
+                <h4>Install App</h4>
+                <p>From App Store or Google Play</p>
+                <div class="row">
+                    <img src="../assets/images/app.jpg" alt="">
+                    <img src="../assets/images/play.jpg" alt="">
+                </div>
+                <p>Secured Payment Gateways</p>
+                <img src="../assets/images/pay.png" alt="">
+            </div>
+
+            <div class="copyright">
+                <p>2025, 4GI - HTML CSS E-commerce site</p>
+            </div>
+
+        </footer>
 </body>
 </html>

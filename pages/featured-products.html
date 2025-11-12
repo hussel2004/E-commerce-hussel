@@ -27,10 +27,33 @@
                 </ul>
             </div>
         </header> -->
-        <header>
-            <div id="navbar-container" style="margin:30px auto 20px;">
-            <a id="brand-name" class="no-underline" href="../index.html">E-Shop</a>
-            <a class="no-underline" href="../index.html" style="margin-left:auto; padding:8px 12px; border-radius:6px; background:#f0f0f0;">Back</a>
+        <header>            
+            <div id="navbar-container">
+                <a id="brand-name" href="../index.html">E-Shop</a>
+                <!-- For hamburger menu -->
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul id="navbar">
+                    <li>
+                        <a class="no-underline options" href="products.html">Browse Categories </a>
+                        <ul class="dropdown">
+                            <li><a class="no-underline" href="category.html?cat=Computers">Computers</a></li>
+                            <li><a class="no-underline" href="category.html?cat=Smartphones">Smartphones</a></li>
+                            <li><a class="no-underline" href="category.html?cat=Cameras">Cameras</a></li>
+                            <li><a class="no-underline" href="category.html?cat=Smart watches">Smart watches</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="no-underline options" href="promotions.html">Super Deals</a></li>
+                    <li><a class="no-underline options" href="a-propos.html">About</a></li>
+                    <li><a class="no-underline options" href="contact.html">Contact</a></li>
+                    <li><a class="no-underline options" href="login-page.html"><i class="fa-solid fa-cart-shopping"></i><span>Cart</span></a></li>
+                    <li style="padding: 30px;"><a class="no-underline user-login options" href="register-page.html"><i class="fa-solid fa-user"></i></a></li>
+
+
+                </ul>
             </div>
         </header>
         <main style="max-width:1200px; margin: 30px auto; padding: 0 16px;">
@@ -90,63 +113,74 @@
             </div>
             <div class="view-all-categories-container" style="margin-top: 50px;">
                 <button class="view-all-categories-btn">
-                    <a href="products.html" style="text-decoration: none;">View More</a>
+                    <a href="products.html" style="text-decoration: none;color: #fff;">View More</a>
                 </button>
             </div>
         </main>
 
-            <footer class="section-p1">
-                <div class="col" style="padding-left: 30px;">
-                    <a id="brand-name" style="margin-bottom: 30px;" href="index.html">E-Shop</a>
-                    <h4>Contact</h4>
-                    <p><strong>Address: </strong>National Advanced School of Engineering of Yaounde(NASEY), Melen</p>        
-                    <p><strong>Phone: </strong> +237 696 696 696</p>
-                    <p><strong>Hours: </strong> 8:00 - 17:45, Mon - Fri</p>
-                    <div class="follow">
-                        <h4>Follow Us</h4>
-                        <div class="icon">
-                            <i class="fab fa-facebook-f"></i>
-                            <i class="fab fa-twitter"></i>
-                            <i class="fab fa-instagram"></i>
-                            <i class="fab fa-pinterest-p"></i>
-                            <i class="fab fa-youtube"></i>
-                        </div>
+            <section class="newsletter" style="margin-top: 100px;">
+            <div class="newstext">
+                <h4 style="font-size: 22px; font-weight: 700; color: white;">Sign Up For Our Newsletter</h4>
+                <p style="font-size: 14px; font-weight: 600;">Get E-mail updates about our latest shop and <span style="color: #8f253c;">special offers</span></p>
+            </div>
+            <div class="form">
+                <input type="text" placeholder="Your email address">
+                <button class="normal">Sign Up</button>
+            </div>
+        </section>
+
+        <footer class="section-p1">
+            <div class="col" style="padding-left: 30px;">
+                <a id="brand-name" style="margin-bottom: 30px;" href="../index.html">E-Shop</a>
+                <h4>Contact</h4>
+                <p><strong>Address: </strong>National Advanced School of Engineering of Yaounde(NASEY), Melen</p>        
+                <p><strong>Phone: </strong> +237 696 696 696</p>
+                <p><strong>Hours: </strong> 8:00 - 17:45, Mon - Fri</p>
+                <div class="follow">
+                    <h4>Follow Us</h4>
+                    <div class="icon">
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-pinterest-p"></i>
+                        <i class="fab fa-youtube"></i>
                     </div>
                 </div>
+            </div>
 
-                <div class="col">
-                    <h4>About</h4>
-                    <a href="">About us</a>
-                    <a href="">Delivery Information</a>
-                    <a href="">Privacy Policy</a>
-                    <a href="">Terms & Conditions</a>
-                    <a href="">Contact Us</a>
-                </div>
-                <div class="col">
-                    <h4>My Account</h4>
-                    <a href="">Sign In</a>
-                    <a href="">View Cart</a>
-                    <a href="">My Wishlist</a>
-                    <a href="">Track My Order</a>
-                    <a href="">Help</a>
-                </div>
+            <div class="col">
+                <h4>About</h4>
+                <a href="a-propos.html">About us</a>
+                <a href="retours.html">Delivery Information</a>
+                <a href="confidentialite.html">Privacy Policy</a>
+                <a href="">Terms & Conditions</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+            <div class="col">
+                <h4>My Account</h4>
+                <a href="login-page.html">Sign In</a>
+                <a href="login-page.html">View Cart</a>
+                <a href="">My Wishlist</a>
+                <a href="">Track My Order</a>
+                <a href="faq.html">Help</a>
+            </div>
 
-                <div class="col install">
-                    <h4>Install App</h4>
-                    <p>From App Store or Google Play</p>
-                    <div class="row">
-                        <img src="assets/images/app.jpg" alt="">
-                        <img src="assets/images/play.jpg" alt="">
-                    </div>
-                    <p>Secured Payment Gateways</p>
-                    <img src="assets/images/pay.png" alt="">
+            <div class="col install">
+                <h4>Install App</h4>
+                <p>From App Store or Google Play</p>
+                <div class="row">
+                    <img src="../assets/images/app.jpg" alt="">
+                    <img src="../assets/images/play.jpg" alt="">
                 </div>
+                <p>Secured Payment Gateways</p>
+                <img src="../assets/images/pay.png" alt="">
+            </div>
 
-                <div class="copyright">
-                    <p>2025, 4GI - HTML CSS E-commerce site</p>
-                </div>
+            <div class="copyright">
+                <p>2025, 4GI - HTML CSS E-commerce site</p>
+            </div>
 
-            </footer>
+        </footer>
 
         <script src="../Scripts/featuredproducts.js"></script>
     </body>
