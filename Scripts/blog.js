@@ -2,21 +2,21 @@
 const articles = [
   {
     image: "../assets/images/iphone-expo-with-case.jpg",
-    titre: "Les 5 meilleurs smartphones de 2025",
-    description: "Découvrez quelles sont les références à ne pas manquer cette année dans l’univers des smartphones …",
-    date: "15 septembre 2025"
+    titre: "Top 5 best smart phones in 2025",
+    description: "Discover the must-have items this year in the world of smartphones",
+    date: "15 september 2025"
   },
   {
     image: "../assets/images/laptop.jpg",
-    titre: "Guide d’achat : choisir un bon ordinateur portable",
-    description: "Que faut-il regarder ? Notre guide complet pour t’aider à faire le bon choix …",
-    date: "1 août 2025"
+    titre: "Guide to buy the best laptop for you",
+    description: "What do you have to look for ? Our complete guide to help you make the best choice",
+    date: "1 august 2025"
   },
   {
     image: "../assets/images/gpc.jpeg",
-    titre: "Accessoires incontournables pour gamer",
-    description: "Manettes, casques, écrans — zoom sur les accessoires utiles pour améliorer ton expérience gaming …",
-    date: "20 juillet 2025"
+    titre: "Essential gaming accessories in 2025",
+    description: "Controllers, headsets, and more: enhance your gaming experience with these top accessories",
+    date: "20 july 2025"
   }
 ];
 
