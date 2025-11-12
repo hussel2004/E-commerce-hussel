@@ -1,140 +1,218 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Politique de retours — DigitalStore</title>
+    <title>Return Policy — DigitalStore</title>
     <link rel="stylesheet" href="../styles/retours.css">
+    <link rel="stylesheet" href="../styles/home.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 </head>
 
 <body>
-    <header class="site-header">
-        <div class="container">
-            <a class="brand" href="../index.html">DigitalStore</a>
-            <nav class="main-nav" aria-label="Navigation principale">
-                <a href="../index.html">Accueil</a>
-                <a href="recherche.html">Recherche</a>
-                <a href="confidentialite.html">Confidentialité</a>
-                <a href="retours.html" class="active">Retours</a>
-            </nav>
-        </div>
-    </header>
+        <header>            
+            <div id="navbar-container">
+                <a id="brand-name" href="../index.html">E-Shop</a>
+                <!-- For hamburger menu -->
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul id="navbar">
+                    <li>
+                        <a class="no-underline options" href="products.html">Browse Categories </a>
+                        <ul class="dropdown">
+                            <li><a class="no-underline" href="category.html?cat=Computers">Computers</a></li>
+                            <li><a class="no-underline" href="category.html?cat=Smartphones">Smartphones</a></li>
+                            <li><a class="no-underline" href="category.html?cat=Cameras">Cameras</a></li>
+                            <li><a class="no-underline" href="category.html?cat=Smart watches">Smart watches</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="no-underline options" href="promotions.html">Super Deals</a></li>
+                    <li><a class="no-underline options" href="a-propos.html">About</a></li>
+                    <li><a class="no-underline options" href="contact.html">Contact</a></li>
+                    <li><a class="no-underline options" href="login-page.html"><i class="fa-solid fa-cart-shopping"></i><span>Cart</span></a></li>
+                    <li style="padding: 30px;"><a class="no-underline user-login options" href="register-page.html"><i class="fa-solid fa-user"></i></a></li>
+
+
+                </ul>
+            </div>
+        </header>
 
     <main class="container">
         <article class="policy">
-            <h1>Politique de retours</h1>
+            <h1>Return Policy</h1>
             <p class="lead">
-                Votre satisfaction est importante pour nous. Cette page explique la procédure et les conditions pour retourner un produit acheté sur DigitalStore.
+                Your satisfaction is important to us. This page explains the procedure and conditions for returning a product purchased on DigitalStore.
             </p>
 
             <section id="delai">
-                <h2>Délai de rétractation</h2>
+                <h2>Withdrawal Period</h2>
                 <p>
-                    Vous disposez d'un délai de <strong>14 jours calendaires</strong> à partir de la date de réception pour nous notifier votre volonté de retourner un produit (droit de rétractation). Pour les retours pour défaut ou non-conformité, contactez-nous
-                    dès que possible — des délais spécifiques peuvent s'appliquer (ex. 7 jours) selon la situation.
+                    You have a period of <strong>14 calendar days</strong> from the date of receipt to notify us of your wish to return a product (right of withdrawal). For returns due to defects or non-compliance, please contact us as soon as possible — specific deadlines may apply (e.g., 7 days) depending on the situation.
                 </p>
             </section>
 
             <section id="conditions">
-                <h2>Conditions pour qu’un retour soit accepté</h2>
+                <h2>Conditions for Return Acceptance</h2>
                 <ul>
-                    <li>Le produit doit être <strong>non utilisé</strong> ou dans l'état tel que vous l'avez reçu (sauf défaut manifeste).</li>
-                    <li>Emballage d'origine, manuels, câbles, accessoires, et étiquettes doivent être retournés.</li>
-                    <li>Fournissez la preuve d'achat (numéro de commande, facture ou ticket).</li>
+                    <li>The product must be <strong>unused</strong> or in the same condition as received (unless there is a visible defect).</li>
+                    <li>Original packaging, manuals, cables, accessories, and tags must be included.</li>
+                    <li>Provide proof of purchase (order number, invoice, or receipt).</li>
                 </ul>
             </section>
 
             <section id="exclusions">
-                <h2>Produits non retournables / exclusions</h2>
-                <p>Les retours peuvent être refusés dans les cas suivants :</p>
+                <h2>Non-Returnable Products / Exclusions</h2>
+                <p>Returns may be refused in the following cases:</p>
                 <ul>
-                    <li>Produits dont le scellé de sécurité a été rompu (ex : logiciels/produits numériques activés).</li>
-                    <li>Produits personnalisés ou configurés spécialement pour le client.</li>
-                    <li>Articles endommagés par mauvaise utilisation ou négligence du client.</li>
-                    <li>Accessoires vendus ouverts et consommables (ex : certains films ou accessoires jetables).</li>
+                    <li>Products whose security seal has been broken (e.g., activated software/digital products).</li>
+                    <li>Customized or specially configured products.</li>
+                    <li>Items damaged due to misuse or customer negligence.</li>
+                    <li>Opened accessories and consumables (e.g., certain films or disposable accessories).</li>
                 </ul>
             </section>
 
             <section id="motifs">
-                <h2>Motifs acceptés pour retour/remplacement</h2>
-                <p>Nous acceptons notamment les retours pour :</p>
+                <h2>Accepted Reasons for Return/Replacement</h2>
+                <p>We accept returns for the following reasons:</p>
                 <ul>
-                    <li>Produit défectueux à la réception.</li>
-                    <li>Produit non conforme à la description sur le site.</li>
-                    <li>Pièces manquantes dans la boîte.</li>
+                    <li>Defective product upon receipt.</li>
+                    <li>Product not matching the website description.</li>
+                    <li>Missing parts in the box.</li>
                 </ul>
             </section>
 
             <section id="procedure">
-                <h2>Procédure de retour (étapes)</h2>
+                <h2>Return Procedure (Steps)</h2>
                 <ol>
-                    <li><strong>Contactez le service client</strong> : envoyez un email à <a href="mailto:retours@digitalstore.example">retours@digitalstore.example</a> ou appelez <strong>+237 6X XX XX XX</strong> en indiquant votre numéro de commande et
-                        le motif.</li>
-                    <li>Nous vous enverrons un <strong>numéro d'autorisation de retour (RMA)</strong> et les instructions pour l'expédition.</li>
-                    <li>Emballez soigneusement le produit dans son emballage d'origine avec tous les accessoires et la preuve d'achat.</li>
-                    <li>Expédiez le colis à l'adresse que nous vous fournirons ou utilisez l'étiquette de retour (si fournie).</li>
-                    <li>Après réception, nous inspecterons le produit. Si le retour est accepté, nous procéderons au remboursement ou à l'échange selon votre choix.</li>
+                    <li><strong>Contact Customer Service</strong>: Send an email to <a href="mailto:retours@digitalstore.example">retours@digitalstore.example</a> or call <strong>+237 6X XX XX XX</strong> with your order number and reason for return.</li>
+                    <li>We will send you a <strong>Return Authorization Number (RMA)</strong> and shipping instructions.</li>
+                    <li>Carefully pack the product in its original packaging with all accessories and proof of purchase.</li>
+                    <li>Ship the package to the address we provide or use the return label (if available).</li>
+                    <li>Once received, we will inspect the product. If the return is approved, we will issue a refund or exchange as per your choice.</li>
                 </ol>
 
-                <p class="notice"><strong>Remarque :</strong> conservez la preuve d’envoi jusqu’à obtention du remboursement.</p>
+                <p class="notice"><strong>Note:</strong> Keep your proof of shipment until your refund is processed.</p>
             </section>
 
             <section id="frais">
-                <h2>Frais de retour</h2>
+                <h2>Return Fees</h2>
                 <p>
-                    - Si le retour est dû à un défaut, une erreur de préparation ou une non-conformité de notre part : <strong>les frais de retour sont à notre charge</strong> (colis prépayé ou remboursement des frais sur présentation de justificatif).<br>                    - Pour un simple changement d'avis : <strong>les frais d'expédition sont à la charge du client</strong> sauf promotion ou politique locale contraire.
+                    - If the return is due to a defect, preparation error, or non-compliance on our part: <strong>return costs are covered by us</strong> (prepaid label or reimbursement of shipping fees upon proof).<br>
+                    - For a simple change of mind: <strong>shipping costs are the customer’s responsibility</strong> unless otherwise specified by a promotion or local policy.
                 </p>
             </section>
 
             <section id="remboursement">
-                <h2>Délai et modalité de remboursement</h2>
+                <h2>Refund Time and Method</h2>
                 <p>
-                    Une fois le produit reçu et inspecté, le remboursement est traité sous <strong>3 à 10 jours ouvrés</strong> selon le moyen de paiement initial. Le remboursement se fera de préférence via le même moyen de paiement utilisé lors de l'achat.
+                    Once the product is received and inspected, refunds are processed within <strong>3 to 10 business days</strong>, depending on the original payment method. Refunds will preferably be made using the same payment method used at purchase.
                 </p>
             </section>
 
             <section id="garantie-sav">
-                <h2>Garantie & Service après-vente (SAV)</h2>
+                <h2>Warranty & After-Sales Service (Customer Support)</h2>
                 <p>
-                    Les produits vendus bénéficient de la garantie fabricant le cas échéant. Si un défaut apparaît après la période de rétractation, nous vous invitons à contacter notre SAV afin d'ouvrir une demande de prise en charge sous garantie.
+                    Products sold are covered by the manufacturer’s warranty, where applicable. If a defect appears after the withdrawal period, please contact our support team to open a warranty claim.
                 </p>
             </section>
 
             <section id="faq">
-                <h2>FAQ rapide</h2>
+                <h2>Quick FAQ</h2>
                 <dl>
-                    <dt>Que faire si j'ai reçu un produit cassé ?</dt>
-                    <dd>Contactez-nous immédiatement (email + photos du colis/produit). Nous organiserons le retour et le remplacement ou le remboursement.</dd>
+                    <dt>What should I do if I received a damaged product?</dt>
+                    <dd>Contact us immediately (email + photos of the package/product). We’ll arrange a return and replacement or refund.</dd>
 
-                    <dt>Puis-je échanger un modèle contre un autre ?</dt>
-                    <dd>Oui, sous réserve de disponibilité. Des frais de port peuvent s'appliquer si l'échange n'est pas dû à une erreur de notre part.</dd>
+                    <dt>Can I exchange one model for another?</dt>
+                    <dd>Yes, subject to availability. Shipping fees may apply if the exchange is not due to our error.</dd>
 
-                    <dt>Combien de temps ai-je pour signaler un défaut ?</dt>
-                    <dd>Signalez tout défaut dès que possible — idéalement dans les 7 jours suivant la réception pour faciliter le traitement.</dd>
+                    <dt>How long do I have to report a defect?</dt>
+                    <dd>Report any defect as soon as possible — ideally within 7 days of receipt to facilitate processing.</dd>
                 </dl>
             </section>
 
             <section id="contact">
-                <h2>Contact — Service Retours</h2>
+                <h2>Contact — Returns Department</h2>
                 <p>
-                    Email : <a href="mailto:retours@digitalstore.example">retours@digitalstore.example</a><br> Téléphone : <strong>+237 6X XX XX XX</strong><br> Adresse de retour (exemple) : DigitalStore SARL, Zone Industrielle, Yaoundé, Cameroun.
-                    <!-- Remplace par la vraie adresse -->
+                    Email: <a href="mailto:retours@digitalstore.example">retours@digitalstore.example</a><br>
+                    Phone: <strong>+237 6X XX XX XX</strong><br>
+                    Return Address (example): DigitalStore SARL, Industrial Zone, Yaoundé, Cameroon.
+                    <!-- Replace with actual address -->
                 </p>
             </section>
 
         </article>
     </main>
 
-    <footer class="site-footer">
-        <div class="container">
-            <p>© <span id="year"></span> DigitalStore — Tous droits réservés.</p>
-            <small>Politique de retours • <a href="confidentialite.html">Politique de confidentialité</a></small>
-        </div>
-    </footer>
+    <section class="newsletter" style="margin-top: 100px;">
+            <div class="newstext">
+                <h4 style="font-size: 22px; font-weight: 700; color: white;">Sign Up For Our Newsletter</h4>
+                <p style="font-size: 14px; font-weight: 600;">Get E-mail updates about our latest shop and <span style="color: #8f253c;">special offers</span></p>
+            </div>
+            <div class="form">
+                <input type="text" placeholder="Your email address">
+                <button class="normal">Sign Up</button>
+            </div>
+        </section>
+
+        <footer class="section-p1">
+            <div class="col" style="padding-left: 30px;">
+                <a id="brand-name" style="margin-bottom: 30px;" href="../index.html">E-Shop</a>
+                <h4>Contact</h4>
+                <p><strong>Address: </strong>National Advanced School of Engineering of Yaounde(NASEY), Melen</p>        
+                <p><strong>Phone: </strong> +237 696 696 696</p>
+                <p><strong>Hours: </strong> 8:00 - 17:45, Mon - Fri</p>
+                <div class="follow">
+                    <h4>Follow Us</h4>
+                    <div class="icon">
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-pinterest-p"></i>
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <h4>About</h4>
+                <a href="a-propos.html">About us</a>
+                <a href="retours.html">Delivery Information</a>
+                <a href="confidentialite.html">Privacy Policy</a>
+                <a href="">Terms & Conditions</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+            <div class="col">
+                <h4>My Account</h4>
+                <a href="login-page.html">Sign In</a>
+                <a href="login-page.html">View Cart</a>
+                <a href="">My Wishlist</a>
+                <a href="">Track My Order</a>
+                <a href="faq.html">Help</a>
+            </div>
+
+            <div class="col install">
+                <h4>Install App</h4>
+                <p>From App Store or Google Play</p>
+                <div class="row">
+                    <img src="../assets/images/app.jpg" alt="">
+                    <img src="../assets/images/play.jpg" alt="">
+                </div>
+                <p>Secured Payment Gateways</p>
+                <img src="../assets/images/pay.png" alt="">
+            </div>
+
+            <div class="copyright">
+                <p>2025, 4GI - HTML CSS E-commerce site</p>
+            </div>
+
+        </footer>
 
     <script>
-        // année dynamique
+        // Dynamic year
         document.getElementById('year').textContent = new Date().getFullYear();
     </script>
 </body>
