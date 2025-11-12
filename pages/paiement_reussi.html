@@ -1,34 +1,29 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paiement Réussi - E-commerce</title>
-    <link rel="stylesheet" href="../styles/paiement.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paiement Réussi - E-commerce</title>
+  <link rel="stylesheet" href="../styles/paiement.css">
+  <script defer src="../Scripts/paiement_reussi.js"></script>
 </head>
 <body>
-    <header class="main-header">
-        <div class="logo">
-            <a href="../index.html">ShopStuff</a>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Accueil</a></li>
-                <li><a href="#">Produits</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">À propos</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main class="success-container">
-        <div class="success-box">
-            <h1>✅ Paiement réussi !</h1>
-            <p>Merci pour votre commande. Vous recevrez un email de confirmation sous peu.</p>
-            <a href="../index.html" class="btn-return">Retourner à la boutique</a>
-        </div>
-    </main>
+  <main class="success-container">
+    <!-- Étape 1 : message d’attente -->
+    <div id="loading-box" class="success-box">
+      <h1>⏳ Confirmation en cours<span class="dots"></span></h1>
+      <p>Veuillez patienter pendant que nous confirmons votre commande...</p>
+    </div>
 
-    
+    <!-- Étape 2 : message de succès (masqué au début) -->
+    <div id="success-box" class="success-box" style="display: none;">
+      <div class="checkmark">✅</div>
+      <h1>Paiement réussi !</h1>
+      <p>Merci pour votre commande. Vous recevrez un email de confirmation sous peu.</p>
+      <a href="../index.html" class="btn-return" id="btnReturn">Retourner à la boutique</a>
+    </div>
+  </main>
+
 </body>
 </html>
