@@ -1,21 +1,38 @@
+// ...existing code...
 document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("formPaiement");
-  const messageProcessing = document.getElementById("messageProcessing");
+  const form = document.querySelector("form");
+  let messageProcessing = document.getElementById("messageProcessing");
+
+  // If the HTML doesn't include a processing message element, create a simple fallback
+  if (!messageProcessing) {
+    messageProcessing = document.createElement("div");
+    messageProcessing.id = "messageProcessing";
+    messageProcessing.textContent = "Processing payment...";
+    messageProcessing.style.display = "none";
+    messageProcessing.style.padding = "16px";
+    messageProcessing.style.textAlign = "center";
+    messageProcessing.style.fontWeight = "600";
+    form.parentNode.insertBefore(messageProcessing, form.nextSibling);
+  }
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
     const data = {
-      nom: document.getElementById("nom").value.trim(),
-      email: document.getElementById("email").value.trim(),
-      adresse: document.getElementById("adresse").value.trim(),
-      ville: document.getElementById("ville").value.trim(),
-      codePostal: document.getElementById("codePostal").value.trim(),
-      typeCarte: document.getElementById("typeCarte").value,
-      numeroCarte: document.getElementById("numeroCarte").value.trim(),
-      dateExpiration: document.getElementById("dateExpiration").value,
-      cvc: document.getElementById("cvc").value.trim(),
+      fullName: (document.querySelector('[name="fullName"]')?.value || "").trim(),
+      email: (document.querySelector('[name="email"]')?.value || "").trim(),
+      address: (document.querySelector('[name="address"]')?.value || "").trim(),
+      city: (document.querySelector('[name="city"]')?.value || "").trim(),
+      state: (document.querySelector('[name="state"]')?.value || "").trim(),
+      zip: (document.querySelector('[name="zip"]')?.value || "").trim(),
+      cardName: (document.querySelector('[name="cardName"]')?.value || "").trim(),
+      cardNumber: (document.querySelector('[name="cardNumber"]')?.value || "").trim(),
+      expMonth: (document.querySelector('[name="expMonth"]')?.value || "").trim(),
+      expYear: (document.querySelector('[name="expYear"]')?.value || "").trim(),
+      cvv: (document.querySelector('[name="cvv"]')?.value || "").trim(),
     };
+
+    console.log("🧾 Données du formulaire de paiement :", data);
 
     // Basic validation
     for (const key in data) {
@@ -30,12 +47,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const commande = {
       client: data,
       panier: cart,
-      total: cart.reduce((s, item) => s + (item.price * item.quantity), 0)
+      total: cart.reduce((s, item) => s + (item.price * item.quantity), 0),
     };
 
-    const jsonCommande = JSON.stringify(commande, null, 2);
-    console.log("🧾 Données prêtes à être envoyées au backend :");
-    console.log(jsonCommande);
+    console.log("🧾 Données prêtes à être envoyées au backend :", commande);
 
     // Show processing message and simulate sending
     form.style.display = "none";
@@ -44,7 +59,8 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
       // On success: clear cart and redirect
       localStorage.removeItem("panier");
-      window.location.href = "paiement_reussi.html";
+      window.location.href = "./paiement_reussi.html";
     }, 2000);
   });
 });
+// ...existing code...

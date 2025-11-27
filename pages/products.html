@@ -245,5 +245,59 @@
             </div>
 
         </footer> 
+<!-- ...existing code... -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const saveCart = (product) => {
+      const cart = JSON.parse(localStorage.getItem('panier') || '[]');
+      const existing = cart.find(p => p.title === product.title);
+      if (existing) {
+        existing.quantity = (existing.quantity || 1) + 1;
+      } else {
+        cart.push(product);
+      }
+      localStorage.setItem('panier', JSON.stringify(cart));
+    };
+
+    document.querySelectorAll('.productItem').forEach(item => {
+      const title = item.querySelector('h3')?.innerText.trim() || 'Product';
+      const priceText = item.querySelector('.prodPrice')?.innerText.trim() || '$0';
+      const price = parseFloat(priceText.replace(/[^0-9.]+/g, '')) || 0;
+      const img = item.querySelector('.prodImage img')?.getAttribute('src') || '';
+
+      // Add to Cart
+      const cartBtn = item.querySelector('.cartButton');
+      if (cartBtn) {
+        cartBtn.addEventListener('click', () => {
+          const product = { id: Date.now(), title, price, quantity: 1, image: img };
+          saveCart(product);
+          window.location.href = 'panier.html';
+        });
+      }
+
+      // Buy Now -> add to cart then go to payment
+      const buyBtn = item.querySelector('.buyButton');
+      if (buyBtn) {
+        buyBtn.addEventListener('click', () => {
+          const product = { id: Date.now(), title, price, quantity: 1, image: img };
+          saveCart(product);
+          window.location.href = 'paiement.html';
+        });
+      }
+
+      // Click image -> product details page with product name
+      const imgEl = item.querySelector('.prodImage img');
+      if (imgEl) {
+        imgEl.style.cursor = 'pointer';
+        imgEl.addEventListener('click', () => {
+          const q = encodeURIComponent(title);
+          window.location.href = `prodDetails.html`;
+        });
+      }
+    });
+  });
+</script>
+
+<!-- ...existing code... -->
 </body>
 </html>

@@ -1,103 +1,241 @@
+<!-- ...existing code... -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/prodDetails.css">
-    <title>Product Detail</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="../styles/prodDetails.css" />
+  <title>Product Detail</title>
 </head>
 <body>
-    <div id="headerPlaceholder"></div>
-    <div class="productDetailContainer" id="prodDetailContainer">
-        <div class="mainProductSection">
-            <div class="imageSection">            
-                <div class="thumbnailImages">
-                    <img src="../assets/images/iphone.webp" alt="Thumbnail 1" class="thumbnail">
-                    <img src="../assets/images/s26.jpg" alt="Thumbnail 2" class="thumbnail">
-                    <img src="../assets/images/macbook.jpg" alt="Thumbnail 3" class="thumbnail">
-                    <img src="../assets/images/ipad.jpg" alt="Thumbnail 4" class="thumbnail">
-                </div>
-            </div>
-            <div class="productInfoSection">
-                <div class="productDetailsSection">
-                    <h1 class="productTitle">Iphone 17</h1>
-                    <div class="productRating">
-                        <span class="ratingStars">⭐⭐⭐⭐⭐</span>
-                        <span class="numReviews">(12k Reviews)</span>
-                    </div>
-                    <div class="productPrice">$999</div>
-                    <div class="productDescription">
-                        <p>The iPhone 17 features a stunning OLED display, advanced A17 Bionic chip, and a versatile triple-camera system. Experience lightning-fast performance and capture every moment in incredible detail.</p>
-                    </div>
-                    <div class="productModification">
-                        <div class="colorOptions">
-                            <label>Color:</label>
-                            <select id="colorSelect">
-                                <option value="black">Black</option>
-                                <option value="white">White</option>
-                                <option value="blue">Blue</option>
-                                <option value="red">Red</option>
-                            </select>
-                        </div>
-                        <div class="storageOptions">
-                            <label>Storage:</label>
-                            <select id="storageSelect">
-                                <option value="64gb">64GB</option>
-                                <option value="128gb">128GB</option>
-                                <option value="256gb">256GB</option>
-                                <option value="512gb">512GB</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="productQuantity">
-                        <label>Quantity:</label>
-                        <input type="number" id="quantityInput" value="1" min="1" max="10">
-                    </div>
-                    <div class="actionButtons">
-                        <button class="cartButton">Add to Cart</button>
-                        <button class="buyButton">Buy Now</button>  
-                    </div>   
-                </div>            
-            </div>
-        </div>        
-        <div class="additionalInfoSection">
-            <div class="infoButtons">
-                <button class="reviewsToggle">Customer Reviews</button>
-                <button class="specsToggle">Specifications</button>                
-            </div>
+  <div id="headerPlaceholder"></div>
 
-        </div>
-    </div>
-    <div class="specReviewSection" id="specReviewSection">
-        <div class="customerReviews" id="customerReviews">
-            <h2>Customer Reviews</h2>
-            <div class="review">
-                <h3>Great Phone!</h3>
-                <p>⭐⭐⭐⭐⭐</p>
-                <p>I absolutely love my new iPhone 17. The camera is fantastic and the battery life is impressive.</p>
-                <p>- John D.</p>
-            </div>
-            <div class="review">
-                <h3>Good but pricey</h3>
-                <p>⭐⭐⭐⭐</p>
-                <p>The phone is great, but I feel it's a bit overpriced for the features it offers.</p>
-                <p>- Sarah K.</p>
-            </div>
-        </div>
-        <div class="productSpecifications" id="productSpecifications" style="display:none;">
-            <h2>Specifications</h2>
-            <ul>
-                <li>Display: 6.7-inch OLED</li>
-                <li>Processor: A17 Bionic Chip</li>
-                <li>Camera: Triple 12MP cameras</li>
-                <li>Battery: Up to 22 hours of talk time</li>
-                <li>Storage Options: 64GB, 128GB, 256GB, 512GB</li>
-                <li>Operating System: iOS 17</li>
-            </ul>
-        </div>
+  <main class="product-detail" id="prodDetailContainer" aria-labelledby="productTitle">
+    <section class="gallery" aria-label="Product images">
+      <div class="main-image-wrap">
+        <img id="mainImage" src="../assets/images/iphone.webp" alt="Product image" />
+      </div>
+      <div class="thumbnails" id="thumbnails" aria-hidden="false">
+        <button class="thumb" data-src="../assets/images/iphone.webp">
+          <img src="../assets/images/iphone.webp" alt="Thumbnail 1" />
+        </button>
+        <button class="thumb" data-src="../assets/images/s26.jpg">
+          <img src="../assets/images/s26.jpg" alt="Thumbnail 2" />
+        </button>
+        <button class="thumb" data-src="../assets/images/macbook.jpg">
+          <img src="../assets/images/macbook.jpg" alt="Thumbnail 3" />
+        </button>
+        <button class="thumb" data-src="../assets/images/ipad.jpg">
+          <img src="../assets/images/ipad.jpg" alt="Thumbnail 4" />
+        </button>
+      </div>
+    </section>
 
-    </div>
+    <aside class="product-info" aria-labelledby="productTitle">
+      <h1 id="productTitle" class="productTitle">Product Name</h1>
 
-    
+      <div class="meta">
+        <div class="rating" aria-hidden="true">⭐⭐⭐⭐⭐</div>
+        <div class="reviewsCount" id="reviewsCount">(0 Reviews)</div>
+      </div>
+
+      <div class="price" id="productPrice">$0</div>
+
+      <p id="productDescription" class="description">Product description goes here.</p>
+
+      <div class="options">
+        <label for="colorSelect">Color</label>
+        <select id="colorSelect" aria-label="Choose color">
+          <option value="default">Default</option>
+        </select>
+
+        <label for="storageSelect">Storage</label>
+        <select id="storageSelect" aria-label="Choose storage">
+          <option value="default">Default</option>
+        </select>
+      </div>
+
+      <div class="purchase">
+        <label for="quantityInput">Quantity</label>
+        <input id="quantityInput" type="number" min="1" value="1" />
+
+        <div class="actionButtons">
+          <button type="button" class="cartButton">Add to Cart</button>
+          <button type="button" class="buyButton">Buy Now</button>
+        </div>
+      </div>
+    </aside>
+
+    <section class="details" id="specReviewSection">
+      <nav class="detail-tabs" role="tablist" aria-label="Product details">
+        <button class="tab reviewsToggle" role="tab" aria-controls="customerReviews" aria-selected="true">Customer Reviews</button>
+        <button class="tab specsToggle" role="tab" aria-controls="productSpecifications" aria-selected="false">Specifications</button>
+      </nav>
+
+      <div id="customerReviews" class="tabPanel" role="tabpanel">
+        <h2>Customer Reviews</h2>
+        <div class="review-list" id="reviewList">
+          <!-- reviews injected here -->
+          <article class="review">
+            <h3>Great Phone!</h3>
+            <p>⭐⭐⭐⭐⭐</p>
+            <p>I absolutely love my new iPhone 17. The camera is fantastic and the battery life is impressive.</p>
+            <p>- John D.</p>
+          </article>
+        </div>
+      </div>
+
+      <div id="productSpecifications" class="tabPanel" role="tabpanel" hidden>
+        <h2>Specifications</h2>
+        <ul id="specList">
+          <li>Display: 6.7-inch OLED</li>
+          <li>Processor: A17 Bionic Chip</li>
+          <li>Camera: Triple 12MP cameras</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Helper: read query parameter ?name=...
+      const params = new URLSearchParams(location.search);
+      const productName = params.get('name') ? decodeURIComponent(params.get('name')) : null;
+
+      // Minimal in-page product data (extend as needed)
+      const catalog = {
+        'Iphone 17': {
+          title: 'Iphone 17',
+          price: 999,
+          imgs: [
+            '../assets/images/iphone.webp',
+            '../assets/images/s26.jpg',
+            '../assets/images/macbook.jpg',
+            '../assets/images/ipad.jpg'
+          ],
+          description: 'The iPhone 17 features a stunning OLED display, advanced A17 Bionic chip, and a versatile triple-camera system.',
+          colors: ['Black','White','Blue','Red'],
+          storage: ['64GB','128GB','256GB','512GB'],
+          reviewsCount: '12k Reviews'
+        }
+        // add more products keyed by title if needed
+      };
+
+      const product = productName && catalog[productName] ? catalog[productName] : Object.values(catalog)[0];
+
+      // Elements
+      const titleEl = document.getElementById('productTitle');
+      const priceEl = document.getElementById('productPrice');
+      const descEl = document.getElementById('productDescription');
+      const mainImage = document.getElementById('mainImage');
+      const thumbnails = document.getElementById('thumbnails');
+      const colorSelect = document.getElementById('colorSelect');
+      const storageSelect = document.getElementById('storageSelect');
+      const qtyInput = document.getElementById('quantityInput');
+      const cartBtn = document.querySelector('.cartButton');
+      const buyBtn = document.querySelector('.buyButton');
+      const reviewsCountEl = document.getElementById('reviewsCount');
+
+      // Populate page with product data
+      titleEl.textContent = product.title;
+      priceEl.textContent = '$' + product.price;
+      descEl.textContent = product.description;
+      reviewsCountEl.textContent = '(' + (product.reviewsCount || '0 Reviews') + ')';
+      if (product.imgs && product.imgs.length) {
+        mainImage.src = product.imgs[0];
+        // create thumbnails dynamically if they differ from static ones
+        thumbnails.innerHTML = '';
+        product.imgs.forEach(src => {
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'thumb';
+          btn.dataset.src = src;
+          btn.innerHTML = `<img src="${src}" alt="Thumbnail" />`;
+          thumbnails.appendChild(btn);
+        });
+      }
+
+      // Populate selects
+      colorSelect.innerHTML = product.colors.map(c => `<option value="${c.toLowerCase()}">${c}</option>`).join('');
+      storageSelect.innerHTML = product.storage.map(s => `<option value="${s}">${s}</option>`).join('');
+
+      // Thumbnail click -> swap main image
+      thumbnails.addEventListener('click', (e) => {
+        const btn = e.target.closest('button.thumb');
+        if (!btn) return;
+        const src = btn.dataset.src;
+        if (src) mainImage.src = src;
+      });
+
+      // Cart helper
+      const saveCart = (item) => {
+        const cart = JSON.parse(localStorage.getItem('panier') || '[]');
+        const existing = cart.find(p => p.title === item.title && p.color === item.color && p.storage === item.storage);
+        if (existing) {
+          existing.quantity = (existing.quantity || 1) + item.quantity;
+        } else {
+          cart.push(item);
+        }
+        localStorage.setItem('panier', JSON.stringify(cart));
+      };
+
+      // Add to cart
+      cartBtn.addEventListener('click', () => {
+        const item = {
+          id: Date.now(),
+          title: product.title,
+          price: product.price,
+          quantity: Math.max(1, parseInt(qtyInput.value) || 1),
+          image: mainImage.src,
+          color: colorSelect.value,
+          storage: storageSelect.value
+        };
+        saveCart(item);
+        location.href = 'panier.html';
+      });
+
+      // Buy now -> save and go to payment
+      buyBtn.addEventListener('click', () => {
+        const item = {
+          id: Date.now(),
+          title: product.title,
+          price: product.price,
+          quantity: Math.max(1, parseInt(qtyInput.value) || 1),
+          image: mainImage.src,
+          color: colorSelect.value,
+          storage: storageSelect.value
+        };
+        saveCart(item);
+        location.href = 'paiement.html';
+      });
+
+      // Tabs toggle (specs / reviews)
+      const reviewsToggle = document.querySelector('.reviewsToggle');
+      const specsToggle = document.querySelector('.specsToggle');
+      const reviewsPanel = document.getElementById('customerReviews');
+      const specsPanel = document.getElementById('productSpecifications');
+
+      const showPanel = (panelToShow) => {
+        reviewsPanel.hidden = panelToShow !== 'reviews';
+        specsPanel.hidden = panelToShow !== 'specs';
+        reviewsToggle.setAttribute('aria-selected', panelToShow === 'reviews');
+        specsToggle.setAttribute('aria-selected', panelToShow === 'specs');
+      };
+
+      reviewsToggle.addEventListener('click', () => showPanel('reviews'));
+      specsToggle.addEventListener('click', () => showPanel('specs'));
+
+      // Accessibility: keyboard thumbnails
+      thumbnails.querySelectorAll('button.thumb').forEach(btn => {
+        btn.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            btn.click();
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
+<!-- ...existing code... -->

@@ -29,6 +29,15 @@ function updateCartTotal() {
 }
 
 //  GESTION DES BOUTONS + et -
+document.addEventListener('DOMContentLoaded', () => {
+  const checkoutBtn = document.querySelector('.checkout');
+  if (checkoutBtn) {
+    checkoutBtn.addEventListener('click', () => {
+      // go to payment page
+      window.location.href = 'paiement.html';
+    });
+  }
+});
 
 function setupQuantityButtons() {
   const plusButtons = document.querySelectorAll(".qty-btn.plus");
@@ -71,12 +80,7 @@ function setupRemoveButtons() {
 
 // MESSAGE AU CHECKOUT
 
-function setupCheckoutButton() {
-  const checkoutBtn = document.querySelector(".checkout");
-  checkoutBtn.addEventListener("click", () => {
-    alert("✅ Merci pour votre achat ! Votre commande est en cours de traitement.");
-  });
-}
+
 
 //  INITIALISATION
 
@@ -89,18 +93,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Continue shopping
 document.addEventListener('DOMContentLoaded', () => {
-    // simple navigation for elements that use data-href
+
     document.querySelectorAll('[data-href]').forEach(el => {
         el.addEventListener('click', (e) => {
             e.preventDefault();
-            const href = el.dataset.href; //To get the data from the element and store its value
+            const href = el.dataset.href; 
             if (!href) return;
-            // if you want to open in same tab:
+           
             window.location.href = href;
-            // or to replace history entry:
-            // window.location.replace(href);
-            // or open in new tab:
-            // window.open(href, '_blank');
+         
         });
     });
 });
