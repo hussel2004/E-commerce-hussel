@@ -10,38 +10,83 @@
 </head>
 
 <body>
-    <header style="display: flex;flex-direction: column;">
-        <h1 style="color: #fff;">Privacy Policy</h1>
-        <p style="color: #fff;">Protecting your data on our digital store</p>
-    </header>
-
-    <main>
-        <section>
-            <h2>1. Data Collection</h2>
-            <p>We collect only the information necessary for processing your orders (name, email, delivery address).</p>
-        </section>
-
-        <section>
-            <h2>2. Use of Data</h2>
-            <p>Your information is used solely for delivery purposes and to improve our services. It is never shared with third parties.</p>
-        </section>
-
-        <section>
-            <h2>3. Security</h2>
-            <p>We use secure protocols to protect your data from any unauthorized access.</p>
-        </section>
-    </main>
-
-        <section class="newsletter" style="margin-top: 100px;">
-            <div class="newstext">
-                <h4 style="font-size: 22px; font-weight: 700; color: white;">Sign Up For Our Newsletter</h4>
-                <p style="font-size: 14px; font-weight: 600;">Get E-mail updates about our latest shop and <span style="color: #8f253c;">special offers</span></p>
+<div style="border-bottom-left-radius: 0px; border-bottom-right-radius: 0px;" id="navbar-container">
+            <a id="brand-name" href="../index.html">E-Shop</a>
+            <!-- For hamburger menu -->
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
-            <div class="form">
-                <input type="text" placeholder="Your email address">
-                <button class="normal">Sign Up</button>
-            </div>
-        </section>
+            <ul id="navbar">
+                <li>
+                    <a class="no-underline options" href="products.html">Browse Categories </a>
+                    <ul class="dropdown">
+                        <li><a class="no-underline" href="category.html?cat=Computers">Computers</a></li>
+                        <li><a class="no-underline" href="category.html?cat=Smartphones">Smartphones</a></li>
+                        <li><a class="no-underline" href="category.html?cat=Cameras">Cameras</a></li>
+                        <li><a class="no-underline" href="category.html?cat=Smart watches">Smart watches</a></li>
+                    </ul>
+                </li>
+                <li><a class="no-underline options" href="promotions.html">Super Deals</a></li>
+                <li><a class="no-underline options" href="a-propos.html">About</a></li>
+                <li><a class="no-underline options" href="contact.html">Contact</a></li>
+                <li><a class="no-underline options" href="login-page.html"><i class="fa-solid fa-cart-shopping"></i><span>Cart</span></a></li>
+                <li style="padding: 30px;"><a class="no-underline user-login options" href="pages/register-page.html"><i class="fa-solid fa-user"></i></a></li>
+            </ul>
+        </div>
+
+<header class="site-hero" style="background:linear-gradient(90deg,#8f253c,#6d1c2e);padding:40px 16px 48px;border-bottom-left-radius:12px;border-bottom-right-radius:12px;color:#fff">
+  <div style="max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:12px">
+    <div>
+      <h1 style="margin:0;font-size:1.6rem;font-weight:700">Privacy Policy</h1>
+      <p style="margin:6px 0 0;color:rgba(255,255,255,0.95)">Protecting your data on our digital store</p>
+    </div>
+    <div style="text-align:right">
+      <span style="display:inline-block;background:rgba(255,255,255,0.08);padding:6px 10px;border-radius:999px;font-weight:700">Effective: 2025</span>
+    </div>
+  </div>
+</header>
+
+<main style="max-width:1100px;margin:28px auto;padding:0 16px;">
+  <section style="max-width:1100px; background:#fff;padding:20px;border-radius:10px;box-shadow:0 8px 30px rgba(0,0,0,0.04);">
+    <h2 style="color:#8f253c;margin:0 0 12px;font-size:1.1rem">Our Privacy Commitment</h2>
+    <p style="color:#666;margin:0 0 16px">We respect your privacy. Below is a concise summary of what we collect and why.</p>
+
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <details open style="background:#fbfbfb;padding:12px;border-radius:8px;border:1px solid rgba(0,0,0,0.03)">
+        <summary style="font-weight:700;cursor:pointer">1. Data Collection</summary>
+        <p style="margin:8px 0;color:#444">We collect only the information necessary to process orders and deliver products: name, email, delivery address and payment details (handled securely by payment providers).</p>
+      </details>
+
+      <details style="background:#fbfbfb;padding:12px;border-radius:8px;border:1px solid rgba(0,0,0,0.03)">
+        <summary style="font-weight:700;cursor:pointer">2. Use of Data</summary>
+        <p style="margin:8px 0;color:#444">Your data is used to fulfil orders, provide customer support, and improve our services. Marketing messages are sent only if you opt in; you can unsubscribe at any time.</p>
+      </details>
+
+      <details style="background:#fbfbfb;padding:12px;border-radius:8px;border:1px solid rgba(0,0,0,0.03)">
+        <summary style="font-weight:700;cursor:pointer">3. Security</summary>
+        <p style="margin:8px 0;color:#444">We implement technical and organisational measures to protect personal data and work with trusted providers who are contractually bound to safeguard your information.</p>
+      </details>
+
+      <details style="background:#fbfbfb;padding:12px;border-radius:8px;border:1px solid rgba(0,0,0,0.03)">
+        <summary style="font-weight:700;cursor:pointer">4. Your Rights</summary>
+        <p style="margin:8px 0;color:#444">You can access, correct, delete or export your data. For requests, contact our privacy team using the contact details on the right.</p>
+      </details>
+    </div>
+  </section>
+</main>
+
+    <section class="newsletter" style="margin-top: 100px;">
+        <div class="newstext">
+            <h4 style="font-size: 22px; font-weight: 700; color: white;">Sign Up For Our Newsletter</h4>
+            <p style="font-size: 14px; font-weight: 600;">Get E-mail updates about our latest shop and <span style="color: #8f253c;">special offers</span></p>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="Your email address">
+            <button class="normal">Sign Up</button>
+        </div>
+    </section>
 
         <footer class="section-p1" style="background-color: #fff;">
             <div class="col" style="padding-left: 30px;">
@@ -95,6 +140,7 @@
             </div>
 
         </footer>
+         <script src="../Scripts/home.js"></script>
 </body>
 
 </html>

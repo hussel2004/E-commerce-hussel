@@ -6,85 +6,171 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>E-Shop - Contact</title>
 
-        <!-- Use same site theme as index -->
         <link rel="stylesheet" href="../styles/home.css" />
         <link rel="stylesheet" href="../assets/css/global.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 
         <style>
-            /* Small page-specific adjustments to fit the site theme */
             .contact-hero {
-                max-width: 1100px;
-                margin: 40px auto;
-                padding: 30px;
-                background: linear-gradient(180deg, rgba(143,37,60,0.04), rgba(143,37,60,0.02));
-                border-radius: 10px;
-                box-shadow: 0 6px 24px rgba(8,8,8,0.06);
+                max-width:1200px;
+                margin:60px auto 40px;
+                padding:0 16px;
+            }
+            .contact-hero h1 {
+                font-size:2.2rem;
+                text-align:center;
+                color:#111;
+                margin-bottom:8px;
+                font-weight:700;
+            }
+            .contact-hero > p {
+                text-align:center;
+                color:#666;
+                font-size:1rem;
+                margin-bottom:40px;
             }
             .contact-grid {
-                display: flex;
-                gap: 2.5rem;
-                flex-wrap: wrap;
+                display:grid;
+                grid-template-columns:1fr 1fr;
+                gap:32px;
+                margin-bottom:60px;
             }
             .contact-card, .contact-form-card {
-                flex: 1 1 320px;
-                background: white;
-                padding: 22px;
-                border-radius: 8px;
-                border: 1px solid #eee;
+                background:#fff;
+                padding:28px;
+                border-radius:10px;
+                box-shadow:0 8px 20px rgba(0,0,0,0.05);
+                border:1px solid #f0f0f0;
             }
             .contact-card h2, .contact-form-card h2 {
-                color: #8f253c;
-                margin-bottom: 12px;
+                color:#8f253c;
+                font-size:1.4rem;
+                margin-bottom:16px;
+                font-weight:700;
+            }
+            .contact-card h3 {
+                font-size:1.05rem;
+                color:#222;
+                margin-top:20px;
+                margin-bottom:8px;
+                font-weight:600;
             }
             .contact-card p, .contact-card a {
-                margin: 8px 0;
-                color: #333;
+                color:#555;
+                font-size:0.95rem;
+                line-height:1.6;
+                margin:6px 0;
+            }
+            .contact-card a {
+                color:#8f253c;
+                text-decoration:none;
+                font-weight:500;
+            }
+            .contact-card a:hover {
+                text-decoration:underline;
+            }
+            .social-icons {
+                display:flex;
+                gap:14px;
+                margin-top:8px;
+            }
+            .social-icons a {
+                display:inline-flex;
+                align-items:center;
+                justify-content:center;
+                width:40px;
+                height:40px;
+                border-radius:50%;
+                background:#f3f3f3;
+                color:#8f253c;
+                font-size:1.1rem;
+                transition:all .2s ease;
+            }
+            .social-icons a:hover {
+                background:#8f253c;
+                color:#fff;
+                transform:translateY(-3px);
             }
             .contact-form {
-                display: grid;
-                gap: 10px;
+                display:grid;
+                gap:14px;
+            }
+            .form-group {
+                display:flex;
+                flex-direction:column;
+                gap:6px;
+            }
+            .form-group label {
+                font-weight:600;
+                color:#222;
+                font-size:0.95rem;
             }
             .contact-form input[type="text"],
             .contact-form input[type="email"],
             .contact-form textarea {
-                width: 100%;
-                padding: 10px 12px;
-                border: 1px solid #ddd;
-                border-radius: 6px;
-                font-size: 0.95rem;
+                width:100%;
+                padding:12px 14px;
+                border:1.5px solid #e6e6e6;
+                border-radius:8px;
+                font-size:0.95rem;
+                font-family:inherit;
+                transition:all .2s ease;
+            }
+            .contact-form input[type="text"]:focus,
+            .contact-form input[type="email"]:focus,
+            .contact-form textarea:focus {
+                outline:none;
+                border-color:#8f253c;
+                box-shadow:0 6px 16px rgba(143,37,60,0.08);
+            }
+            .contact-form textarea {
+                resize:vertical;
+                min-height:140px;
             }
             .btn-submit {
-                display: inline-block;
-                background: #8f253c;
-                color: #fff;
-                padding: 10px 16px;
-                border: none;
-                border-radius: 6px;
-                cursor: pointer;
-                font-weight: 600;
+                align-self:flex-end;
+                background:#8f253c;
+                color:#fff;
+                padding:12px 24px;
+                border:0;
+                border-radius:8px;
+                cursor:pointer;
+                font-weight:700;
+                font-size:0.95rem;
+                transition:all .2s ease;
+                text-transform:uppercase;
+                letter-spacing:0.6px;
             }
             .btn-submit:hover {
-                background-color: #776f73;
+                background:#6d1c2e;
+                transform:translateY(-2px);
+                box-shadow:0 8px 18px rgba(143,37,60,0.2);
             }
-            @media (max-width: 720px) {
-                .contact-hero { padding: 18px; }
+
+            @media (max-width:768px) {
+                .contact-grid {
+                    grid-template-columns:1fr;
+                    gap:24px;
+                }
+                .contact-hero h1 {
+                    font-size:1.6rem;
+                }
+                .contact-card, .contact-form-card {
+                    padding:20px;
+                }
             }
         </style>
     </head>
     <body>
 
-        <!-- Header (keeps the same theme/navigation as index.html) -->
-        <!-- <header>            
+        <header>            
             <div id="navbar-container">
                 <a id="brand-name" href="../index.html">E-Shop</a>
-
                 <div class="hamburger">
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
                 </div>
-
                 <ul id="navbar">
                     <li>
                         <a class="no-underline options" href="products.html">Browse Categories</a>
@@ -95,93 +181,79 @@
                             <li><a class="no-underline" href="category.html?cat=Smart watches">Smart watches</a></li>
                         </ul>
                     </li>
-                    <li><a class="no-underline options" href="promotions.html">🔥Super Deals</a></li>
-                    <li><a class="no-underline options" href="a-propos.html">About</a></li>
-                    <li><a class="no-underline options" href="contact.html">Contact</a></li>
-                    <li><a class="no-underline options" href="login-page.html"><i class="fa-solid fa-cart-shopping"></i><span>Cart</span></a></li>
-                    <li><a class="no-underline user-login options" href="register-page.html"><i class="fa-solid fa-user"></i><span class="login-text">Hello, <strong>Login/Sign Up</strong></span></a></li>
-                </ul>
-            </div>
-        </header> -->
-
-        <header>            
-            <div id="navbar-container">
-                <a id="brand-name" href="../index.html">E-Shop</a>
-                <!-- For hamburger menu -->
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-                <ul id="navbar">
-                    <li>
-                        <a class="no-underline options" href="products.html">Browse Categories </a>
-                        <ul class="dropdown">
-                            <li><a class="no-underline" href="category.html?cat=Computers">Computers</a></li>
-                            <li><a class="no-underline" href="category.html?cat=Smartphones">Smartphones</a></li>
-                            <li><a class="no-underline" href="category.html?cat=Cameras">Cameras</a></li>
-                            <li><a class="no-underline" href="category.html?cat=Smart watches">Smart watches</a></li>
-                        </ul>
-                    </li>
                     <li><a class="no-underline options" href="promotions.html">Super Deals</a></li>
                     <li><a class="no-underline options" href="a-propos.html">About</a></li>
                     <li><a class="no-underline options" href="contact.html">Contact</a></li>
-                    <li><a class="no-underline options" href="login-page.html"><i class="fa-solid fa-cart-shopping"></i><span>Cart</span></a></li>
-                    <li style="padding: 30px;"><a class="no-underline user-login options" href="register-page.html"><i class="fa-solid fa-user"></i></a></li>
-
-
+                    <li><a class="no-underline options" href="panier.html"><i class="fa-solid fa-cart-shopping"></i><span>Cart</span></a></li>
+                    <li style="padding:30px;"><a class="no-underline user-login options" href="./retours.html"><i class="fa-solid fa-user"></i></a></li>
                 </ul>
             </div>
         </header>
 
         <main class="contact-hero">
-            <h1 style="text-align:center; margin-bottom: 18px;">Contact Us</h1>
+            <h1>Contact Us</h1>
+            <p>We'd love to hear from you. Get in touch with our team anytime.</p>
 
             <div class="contact-grid">
+                <!-- Left: Contact Info -->
                 <div class="contact-card">
-                    <h2>Key Information</h2>
-                    <p><strong>Phone:</strong> <a href="tel:+237677461149">+237 677 461 149</a></p>
-                    <p><strong>Email:</strong> <a href="mailto:loicbakotcha@gmail.com">loicbakotcha@gmail.com</a></p>
-                    <p><strong>Address:</strong> National Advanced School of Engineering of Yaoundé (NASEY), Melen</p>
+                    <h2>Get In Touch</h2>
+                    
+                    <h3>Phone</h3>
+                    <p><a href="tel:+237677461149">+237 677 461 149</a></p>
 
-                    <h3 style="margin-top:16px;">Business Hours</h3>
-                    <p>Mon - Fri: 08:00 — 17:45</p>
+                    <h3>Email</h3>
+                    <p><a href="mailto:loicbakotcha@gmail.com">loicbakotcha@gmail.com</a></p>
 
-                    <h3 style="margin-top:16px;">Follow Us</h3>
-                    <p>
-                        <a href="#" style="margin-right:8px;"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" style="margin-right:8px;"><i class="fab fa-twitter"></i></a>
-                        <a href="#" style="margin-right:8px;"><i class="fab fa-instagram"></i></a>
-                    </p>
+                    <h3>Address</h3>
+                    <p>National Advanced School of Engineering of Yaoundé (NASEY), Melen</p>
+
+                    <h3>Business Hours</h3>
+                    <p>Mon - Fri: 08:00 — 17:45<br>Sat - Sun: Closed</p>
+
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
                 </div>
 
+                <!-- Right: Contact Form -->
                 <div class="contact-form-card">
                     <h2>Send Us a Message</h2>
-                    <form class="contact-form" action="#" method="POST" novalidate>
-                        <label for="nom" style="font-weight:600;">Full Name</label>
-                        <input type="text" id="nom" name="nom" required>
-
-                        <label for="email" style="font-weight:600;">Email</label>
-                        <input type="email" id="email" name="email" required>
-
-                        <label for="sujet" style="font-weight:600;">Subject</label>
-                        <input type="text" id="sujet" name="sujet">
-
-                        <label for="message" style="font-weight:600;">Your Message</label>
-                        <textarea id="message" name="message" rows="6" required></textarea>
-
-                        <div style="display:flex; justify-content:flex-end; margin-top:8px;">
-                            <button type="submit" class="btn-submit">Send Message</button>
+                    <form class="contact-form" novalidate>
+                        <div class="form-group">
+                            <label for="nom">Full Name *</label>
+                            <input type="text" id="nom" name="nom" required>
                         </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="sujet">Subject *</label>
+                            <input type="text" id="sujet" name="sujet" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Your Message *</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-submit">Send Message</button>
                     </form>
                 </div>
             </div>
         </main>
 
-        <section class="newsletter" style="margin-top: 100px;">
+        <section class="newsletter" style="margin-top:100px;">
             <div class="newstext">
-                <h4 style="font-size: 22px; font-weight: 700; color: white;">Sign Up For Our Newsletter</h4>
-                <p style="font-size: 14px; font-weight: 600;">Get E-mail updates about our latest shop and <span style="color: #8f253c;">special offers</span></p>
+                <h4 style="font-size:22px; font-weight:700; color:#fff;">Sign Up For Our Newsletter</h4>
+                <p style="font-size:14px; font-weight:600;">Get E-mail updates about our latest shop and <span style="color:#8f253c;">special offers</span></p>
             </div>
             <div class="form">
                 <input type="text" placeholder="Your email address">
@@ -190,12 +262,12 @@
         </section>
 
         <footer class="section-p1">
-            <div class="col" style="padding-left: 30px;">
-                <a id="brand-name" style="margin-bottom: 30px;" href="../index.html">E-Shop</a>
+            <div class="col" style="padding-left:30px;">
+                <a id="brand-name" style="margin-bottom:30px;" href="../index.html">E-Shop</a>
                 <h4>Contact</h4>
-                <p><strong>Address: </strong>National Advanced School of Engineering of Yaounde(NASEY), Melen</p>        
-                <p><strong>Phone: </strong> +237 696 696 696</p>
-                <p><strong>Hours: </strong> 8:00 - 17:45, Mon - Fri</p>
+                <p><strong>Address:</strong> National Advanced School of Engineering of Yaoundé (NASEY), Melen</p>        
+                <p><strong>Phone:</strong> +237 677 461 149</p>
+                <p><strong>Hours:</strong> 8:00 - 17:45, Mon - Fri</p>
                 <div class="follow">
                     <h4>Follow Us</h4>
                     <div class="icon">
@@ -219,7 +291,7 @@
             <div class="col">
                 <h4>My Account</h4>
                 <a href="login-page.html">Sign In</a>
-                <a href="login-page.html">View Cart</a>
+                <a href="panier.html">View Cart</a>
                 <a href="">My Wishlist</a>
                 <a href="">Track My Order</a>
                 <a href="faq.html">Help</a>
@@ -229,17 +301,16 @@
                 <h4>Install App</h4>
                 <p>From App Store or Google Play</p>
                 <div class="row">
-                    <img src="../assets/images/app.jpg" alt="">
-                    <img src="../assets/images/play.jpg" alt="">
+                    <img src="../assets/images/app.jpg" alt="App Store">
+                    <img src="../assets/images/play.jpg" alt="Google Play">
                 </div>
                 <p>Secured Payment Gateways</p>
-                <img src="../assets/images/pay.png" alt="">
+                <img src="../assets/images/pay.png" alt="Payment methods">
             </div>
 
             <div class="copyright">
                 <p>2025, 4GI - HTML CSS E-commerce site</p>
             </div>
-
         </footer>
 
         <script src="../Scripts/home.js"></script>
